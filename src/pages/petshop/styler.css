@@ -1,0 +1,26 @@
+
+.petshopDestaque{
+    cursor: pointer; 
+    background-color: #f6f5f5;
+    height: 19rem;
+    max-height: 20rem;
+}
+.petshop-infos{
+    vertical-align: middle;
+    color: #626264;
+}
+
+.petshop-infos span.mdi-star{
+    color: #facd5d;
+}
+.petshop-infos text{
+    font-size: 13px;
+    margin-right: 10px;
+    vertical-align: middle;
+    color: #626264;
+}
+
+.petshop-image{
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
