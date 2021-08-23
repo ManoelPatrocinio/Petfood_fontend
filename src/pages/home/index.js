@@ -14,10 +14,11 @@ const Home = () => {
     dispatch(requestPetshops());
   },[])
   return (
+    
     <div className="h-100">
-      <Header></Header>
-      <div className="container-fluid petshop-list-container">
-        <div className="col-12 px-4 text-center">
+      <Header ></Header>
+      <div className="container-fluid petshop-list-container col-12">
+        <div className="col-12 px-4 text-center subTitle">
           <h5>Mais próximos de você(6)</h5>
         </div>
         <ul className="col-12 petshop-list">

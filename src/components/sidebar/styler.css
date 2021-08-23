@@ -33,3 +33,14 @@
     font-weight: 600;
     font-size: 1.2 rem !important;
 }
+
+
+/* 
+*
+* layout mobile
+*
+*/
+
+@media(max-width:575.98px){
+    
+}

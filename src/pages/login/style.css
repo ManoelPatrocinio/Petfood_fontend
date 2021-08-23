@@ -4,7 +4,7 @@ body{
 
 }
 
-.cadastro_body {
+.login_body {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@ body{
   height: 100%;
   opacity: .7;
 }
-.cadastro_container {
+.login_container {
   position: absolute;
     height: 100%;
     min-width: 100vh;
@@ -36,13 +36,11 @@ body{
   padding: 0;
 }
 
-.cadastro_box {
+.login_box {
 
-  margin: 1rem;
+    margin: 3rem 0 0 0;
+    justify-content: center;
   
-}
-.cadastro_box form {
-    margin: 0 auto;
 }
 
 .boxHeader h2 {
@@ -121,12 +119,44 @@ button{
 */
 
 @media (max-width: 600px) {
-  .logoContainer {
-    margin: 0 15%;
-  }
-    .cadastro_box form {
-      margin: 0 5%;
-      width: 47%;
+  .footer-content {
+    width: 100%;
+    display: block;
   }
 
+  .footer-content p {
+    width: 100%;
+    font-size: 1rem;
+    padding: 3px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .social-list {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  .social-list li {
+    margin: 0 auto;
+  }
+}
+
+.linkPcadastro{
+    width: 100% !important;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0.7rem;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.linkPcadastro:hover{
+    color: #FA643D !important;
+}
+.linkPcadastro span{
+    color: #FA643D !important;
+    text-decoration: underline !important;
+    cursor: pointer;
 }

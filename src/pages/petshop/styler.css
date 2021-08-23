@@ -1,9 +1,16 @@
-
+.containerPetInfo{
+    margin-top: 3%;
+}
 .petshopDestaque{
     cursor: pointer; 
     background-color: #f6f5f5;
     height: 19rem;
     max-height: 20rem;
+}
+.containerImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .petshop-infos{
     vertical-align: middle;
@@ -23,4 +30,46 @@
 .petshop-image{
     border-radius: 5px;
     margin-bottom: 20px;
+}
+
+
+/* 
+*
+* layout mobile
+*
+*/
+
+@media(max-width:575.98px){
+    .containerPetInfo{
+        flex-direction: column;
+        width: 100vw;
+        height: 100%;
+
+    }
+
+    .petshopDestaque{
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+    }
+
+    .containerProdutos{
+        width: 100%;
+        height: 100%;
+        margin: 10% 0;
+    }
+    .product {
+        margin-bottom: 1rem;
+        height: 23rem;
+        max-height: 24rem;
+        width: 50%;
+    }
+    .product button {
+        font-size: 1rem;
+        padding: 1px 11px;
+        border: none;
+        height: 100%;
+        
+    }
+
 }

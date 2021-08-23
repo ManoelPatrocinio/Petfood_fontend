@@ -12,11 +12,30 @@
         rgba(255,255,255,0) 100%
     );
 }
-
+.subTitle h5{
+  color: #6c757d;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  padding: 5px;
+}
 .petshop-list {
   padding: 15px;
   overflow-x: auto;
   white-space: nowrap; /*rolagem horizontal*/
   width: 100%;
-  margin-top: 15px;
+  margin-top: 10px;
 }
+.petshop-list::-webkit-scrollbar {
+  width: 10px
+} 
+
+.petshop-list::-webkit-scrollbar-thumb {   
+ background-color: darkgrey; 
+  border-radius: 24px;
+}
+
+
+/* 
+*
+* layout mobile
+*/

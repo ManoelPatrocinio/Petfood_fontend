@@ -5,7 +5,8 @@ import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 import Header from "../../components/header";
 import Illustration from "../../assets/background_img2.jpg";
-import { Link, useHistory } from "react-router-dom";
+import LogoWhite from "../../assets/logo-white.png";
+import { Link,useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
 import "./styler.css";
 
@@ -55,7 +56,12 @@ const Cadastro = () => {
       <img src={Illustration} className="imgFundo" />
       <section className="cadastro_container">
         <div className="header">
-          <Header whiteVersion hideSideBar />
+           <div className="logoContainer py-3 px-4 text-center">
+            <Link to="/">
+              <img src={LogoWhite} className="img-fluid" alt="petfood"/>
+            </Link>
+          </div>
+
         </div>
         <div className="col-12 cadastro_box">
           <form
@@ -109,8 +115,8 @@ const Cadastro = () => {
                   message: "Informe um e-mail válido",
                 },
                 minLength: {
-                  value: 5,
-                  message: "O nome deve ter mais de 4 caracteres",
+                  value: 12,
+                  message: "O email deve ter mais de 10 caracteres",
                 },
               })}
               onChange={(e) => {
@@ -216,13 +222,6 @@ const Cadastro = () => {
               }}
             />
 
-            {/* <Link
-                // to="/checkout"
-                onClick={() => handleSubmit(vai)}
-                className="btn btn-lg w-100 btn-secondary"
-              >
-                Finalizar Cadastro
-              </Link> */}
             <button type="submit" className="btn btn-lg w-100 btn-secondary">
               Finalizar Cadastro
             </button>
