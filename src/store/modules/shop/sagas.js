@@ -1,7 +1,7 @@
 import { takeLatest, all, call, put, select } from "redux-saga/effects"; // vincula uma função a uma action
 import types from "./types";
 import api from "../../../services/api";
-import { setPetshops, setPetshop } from "./actions";
+import { setPetshops, setPetshop} from "./actions";
 import Swal from "sweetalert2";
 
 export function* requestPetshops() {
@@ -46,8 +46,27 @@ export function* makePurchase() {
    }); 
 }
 
+
+export function* makeRegister() {
+  const { userData } = yield select((state) => state.shop);
+  const response = yield call(api.post, "/auth/register", userData);
+  const res = response.data;
+
+  if (res.error) {
+    Swal.fire({
+      icon: "error",
+      title: "Oopsss",
+      text:"Falha no cadastro, verifique seus dados"
+      // text: res.message,
+    });
+    return false;
+  }
+
+}
+
 export default all([
   takeLatest(types.REQUEST_PETSHOPS, requestPetshops),
   takeLatest(types.REQUEST_PETSHOP, requestPetshop),
   takeLatest(types.MAKE_PURCHASE, makePurchase),
+  takeLatest(types.MAKE_REGISTER, makeRegister),
 ]);

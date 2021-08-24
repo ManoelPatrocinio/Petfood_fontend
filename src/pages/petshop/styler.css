@@ -49,8 +49,14 @@
 
     .petshopDestaque{
         width: 100%;
-        height: 100%;
+        height: 50vh;
         max-height: 100%;
+    }
+    .containerImg{
+        height: 70%;
+    }
+    .petshop-infos{
+        height: 30%;
     }
 
     .containerProdutos{
@@ -69,7 +75,8 @@
         padding: 1px 11px;
         border: none;
         height: 100%;
-        
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
 }

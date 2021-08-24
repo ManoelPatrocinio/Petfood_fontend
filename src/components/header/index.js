@@ -63,9 +63,16 @@ const Header = ({ whiteVersion, hideSideBar }) => {
           </div>
         </div>
         {!hideSideBar && (
-          <button onClick={() => openDrawer()} className="btn cart-button">
-            <span className="mdi mdi-cart"></span>({cart.length})
-          </button>
+          // <button onClick={() => openDrawer()} className="btn cart-button">
+          //   <span className="mdi mdi-cart"></span>({cart.length})
+          // </button>
+
+          <button type="button"onClick={() => openDrawer()} className="btn cart-button position-relative">
+            <span className="mdi mdi-cart"></span>
+            <span className="position-absolute top-0 start-80 translate-middle rounded-circle">
+              <span className="visually">{cart.length}</span>
+            </span>
+         </button>
         )}
       </div>
   

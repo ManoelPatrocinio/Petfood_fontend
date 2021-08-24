@@ -19,26 +19,26 @@ const Store = () => {
   return (
     
     <div className="col-12">
-      <Header whiteVersion />
+      <Header/>
 
         <section className="containerCategorias col-12">
             <div className="box_categoria_circle d-flex">
-                <div className="categoria_item ">
+                <div className="categoria_item h-100 ">
                   <img src={catDog} alt="" />
                 </div>
-                <div className="categoria_item">
+                <div className="categoria_item h-100">
                   <img src={catCat} alt="" />
                 </div>
-                <div className="categoria_item">
+                <div className="categoria_item h-100">
                   <img src={catBirt} alt="" />
                 </div>
-                <div className="categoria_item">
+                <div className="categoria_item h-100">
                   <img src={catFish} alt="" />
                 </div>
-                <div className="categoria_item">
+                <div className="categoria_item h-100">
                   <img src={catRoedores} alt="" />
                 </div>
-                <div className="categoria_item">
+                <div className="categoria_item h-100">
                   <img src={catRept} alt="" />
                 </div>
             </div>

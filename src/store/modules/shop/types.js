@@ -9,6 +9,8 @@ const types = {
   TOGGLE_CART_PRODUCT: "@shop/TOGGLE_CART_PRODUCT",
   SET_TRANSACTION: "@shop/SET_TRANSACTION",
   MAKE_PURCHASE: "@shop/MAKE_PURCHASE",
+  MAKE_REGISTER: "@shop/MAKE_REGISTER",
+
 };
 
 export default types;

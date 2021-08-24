@@ -120,7 +120,7 @@ button{
 *
 */
 
-@media (max-width: 600px) {
+@media(max-width: 600px) {
   .logoContainer {
     margin: 0 15%;
   }

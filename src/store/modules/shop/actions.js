@@ -32,3 +32,7 @@ export function setTransaction(transaction) {
 export function makePurchase() {
   return { type: types.MAKE_PURCHASE };
 }
+export function makeRegister(userData) {
+  return { type: types.MAKE_REGISTER,userData };
+}
+

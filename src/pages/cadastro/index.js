@@ -1,6 +1,6 @@
 import { useState, React } from "react";
 import { useDispatch } from "react-redux"; //dispara a action p/ a reducer atravez do UI
-import { setCustomer as setStoreCustomer } from "../../store/modules/shop/actions";
+import { makeRegister as setUserData, setCustomer as setStoreCustmer } from "../../store/modules/shop/actions";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 import Header from "../../components/header";
@@ -18,33 +18,42 @@ const Cadastro = () => {
     criteriaMode: "all",
   });
 
-  const [customer, setCustomer] = useState({
+  const [userData, makeRegister] = useState({
     external_id: new Date().getTime().toString(),
     name: "",
-    type: "individual",
-    country: "br",
     email: "",
-    documents: [
-      {
-        type: "cpf",
-        number: "",
-      },
-    ],
-    phone_numbers: [""],
+    cpf:"",
+    phone: "",
     birthday: "",
   });
 
+  const [customer, setCustomer] = useState({
+    external_id: new Date().getTime().toString(),
+    name: '',
+    type: 'individual',
+    country: 'br',
+    email: '',
+    documents: [
+      {
+        type: 'cpf',
+        number: '',
+      },
+    ],
+    phone_numbers: [''],
+    birthday: '',
+  });
+
   const goToCheckOut = () => {
-    dispatch(setStoreCustomer(customer));
+    dispatch(setUserData(userData));
+    
   };
   const onSubmit = () =>{
     goToCheckOut() // salva os dados no customer
     Swal.fire({
       icon: "success",
       title: "Tudo certo",
-      text: "Seu cadastro foi realizado !",
+      text: "Seu cadastro foi realizado, Aproveite !",
     }).then((result) => {
-      
       if (result.isConfirmed) {
        history.push("/checkout");
       }; 
@@ -65,8 +74,7 @@ const Cadastro = () => {
         </div>
         <div className="col-12 cadastro_box">
           <form
-            className="col-3
-            "
+            className="col-3"
             onSubmit={handleSubmit(onSubmit)}
           >
             <div className="text-center mb-4 boxHeader">
@@ -85,7 +93,8 @@ const Cadastro = () => {
                 },
               })}
               onChange={(e) => {
-                setCustomer({ ...customer, name: e.target.value }); //pega tudo de custumer e atualiza apenas o Name
+                makeRegister({ ...userData, name: e.target.value });
+               
               }}
             />
             <ErrorMessage
@@ -120,7 +129,7 @@ const Cadastro = () => {
                 },
               })}
               onChange={(e) => {
-                setCustomer({ ...customer, email: e.target.value }); //pega tudo de custumer e atualiza apenas o Name
+                makeRegister({ ...userData, email: e.target.value }); //pega tudo de custumer e atualiza apenas o Name
               }}
             />
             <ErrorMessage
@@ -154,7 +163,7 @@ const Cadastro = () => {
                 },
               })}
               onChange={(e) => {
-                setCustomer({ ...customer, phone_numbers: [e.target.value] }); //pega tudo de custumer e atualiza apenas o
+                makeRegister({ ...userData, phone: e.target.value }); //pega tudo de custumer e atualiza apenas o
               }}
             />
             <ErrorMessage
@@ -188,15 +197,8 @@ const Cadastro = () => {
                 },
               })}
               onChange={(e) => {
-                setCustomer({
-                  ...customer,
-                  documents: [
-                    {
-                      type: "cpf",
-                      number: e.target.value,
-                    },
-                  ],
-                }); //pega tudo de custumer e atualiza apenas o
+                makeRegister({
+                  ...userData, cpf: e.target.value  }); //pega tudo de custumer e atualiza apenas o
               }}
             />
             <ErrorMessage
@@ -216,9 +218,35 @@ const Cadastro = () => {
             <input
               type="date"
               className="form-control form-control-lg mt-3"
+              name="client_birthday"
               placeholder="Data de nascimento"
+              {...register("client_birthday", {
+                required: "Informe sua Data de nascimento",
+                pattern: {
+                  value: /\d+/,
+                  message: "Apenas Números",
+                },
+                minLength: {
+                  value: 8,
+                  message: "Informe Dia/Mes/Ano",
+                },
+              })}
               onChange={(e) => {
-                setCustomer({ ...customer, birthday: e.target.value }); //pega tudo de custumer e atualiza apenas o
+                makeRegister({ ...userData, birthday: e.target.value }); //pega tudo de custumer e atualiza apenas o
+              }}
+            />
+            <ErrorMessage
+              errors={errors}
+              name="client_birthday"
+              render={({ messages }) => {
+                console.log("messages", messages);
+                return messages
+                  ? Object.entries(messages).map(([type, message]) => (
+                      <small className="alertCadInput" key={type}>
+                        {message}
+                      </small>
+                    ))
+                  : null;
               }}
             />
 

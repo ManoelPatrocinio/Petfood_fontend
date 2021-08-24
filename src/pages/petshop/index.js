@@ -12,7 +12,7 @@ const Petshop = ({ match }) => {
 
   useEffect(() => {
     dispatch(requestPetshop(match.params.id));
-  }, []);
+  }, []);  
 
   return (
     <div className="h-100">
