@@ -36,3 +36,7 @@ export function makeRegister(userData) {
   return { type: types.MAKE_REGISTER,userData };
 }
 
+export function makeLogin(user) {
+  return { type: types.MAKE_LOGIN,user };
+}
+

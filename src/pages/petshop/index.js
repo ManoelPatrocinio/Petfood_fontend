@@ -8,7 +8,7 @@ import Header from "../../components/header";
 
 const Petshop = ({ match }) => {
   const dispatch = useDispatch();
-  const { petshop } = useSelector((state) => state.shop);
+  const { petshop } = useSelector((state) => state.shop);  
 
   useEffect(() => {
     dispatch(requestPetshop(match.params.id));

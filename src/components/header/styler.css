@@ -15,6 +15,7 @@
   height: 3.75rem;
 }
 .containerSearch{
+  width: 17.313rem;
   margin: 0 ;
   justify-content: center;
   align-items: center;
@@ -69,7 +70,14 @@
 
 }
 
+.logoContainer{
+  width: 17.313rem;
+}
 
+.ContainerUserAndCart{
+  width: 17.313rem;
+  justify-content: flex-end;
+}
 .Userperfil{
   justify-content: center;
   align-items: center;

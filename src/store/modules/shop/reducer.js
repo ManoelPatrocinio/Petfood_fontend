@@ -45,6 +45,10 @@ const INITTIAL_STATE = {
     phone:"",
     cpf:"",
   },
+  user:{
+    email:"",
+    cpf:"",
+  },
   shipping: {},
   items: [],
   split_rules: [],
@@ -61,6 +65,11 @@ function shop(state = INITTIAL_STATE, action) {
     case types.MAKE_REGISTER: {
       return produce(state, (draft) => {
         draft.userData = action.userData;
+      });
+    }
+    case types.MAKE_LOGIN: {
+      return produce(state, (draft) => {
+        draft.user = action.user;
       });
     }
     case types.SET_PETSHOPS: {

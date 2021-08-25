@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 
 const Header = ({ whiteVersion, hideSideBar }) => {
     const { cart } = useSelector((state) => state.shop);
+    const {user}   = useSelector((state) => state.shop);
 
   // evento para abrir a sidebar da sacola de itens,será disparada para toda aplicação
   const openDrawer = () => {

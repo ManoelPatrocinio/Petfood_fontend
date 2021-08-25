@@ -10,6 +10,7 @@ const types = {
   SET_TRANSACTION: "@shop/SET_TRANSACTION",
   MAKE_PURCHASE: "@shop/MAKE_PURCHASE",
   MAKE_REGISTER: "@shop/MAKE_REGISTER",
+  MAKE_LOGIN: "@shop/MAKE_LOGIN",
 
 };
 

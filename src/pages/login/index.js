@@ -1,10 +1,10 @@
 import { useState, React } from "react";
 import { useDispatch } from "react-redux"; //dispara a action p/ a reducer atravez do UI
-import { setCustomer as setStoreCustomer } from "../../store/modules/shop/actions";
+import { makeLogin as login } from "../../store/modules/shop/actions";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
-import Header from "../../components/header";
 import Illustration from "../../assets/background_img2.jpg";
+import LogoWhite from "../../assets/logo-white.png";
 import { Link, useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
 import "./style.css";
@@ -17,22 +17,20 @@ const Login = () => {
     criteriaMode: "all",
   });
 
-  const [customer, setCustomer] = useState({
-    external_id: new Date().getTime().toString(),
+  const [customer, makeLogin] = useState({
     email: "",
-    password: "",
-    
+    cpf: "",
   });
 
   const goToCheckOut = () => {
-    dispatch(setStoreCustomer(customer));
+    dispatch(login(customer));
   };
   const onSubmit = () =>{
     goToCheckOut() // salva os dados no customer
     Swal.fire({
       icon: "success",
       title: "Tudo certo",
-      text: "Seu cadastro foi realizado !",
+      text: "Login realizado, Bem vindo !",
     }).then((result) => {
       
       if (result.isConfirmed) {
@@ -46,7 +44,11 @@ const Login = () => {
       <img src={Illustration} className="imgFundo" />
       <section className="login_container">
         <div className="header">
-          <Header whiteVersion hideSideBar />
+          <div className="logoContainer py-3 px-4 text-center">
+            <Link to="/">
+              <img src={LogoWhite} className="img-fluid" alt="petfood"/>
+            </Link>
+          </div>
         </div>
         <div className="col-12 d-flex login_box">
           <form
@@ -76,7 +78,7 @@ const Login = () => {
                 },
               })}
               onChange={(e) => {
-                setCustomer({ ...customer, email: e.target.value }); //pega tudo de custumer e atualiza apenas o Name
+                makeLogin({ ...customer, email: e.target.value }); //pega tudo de custumer e atualiza apenas o Name
               }}
             />
             <ErrorMessage
@@ -96,23 +98,26 @@ const Login = () => {
             <input
               type="password"
               className="form-control form-control-lg mt-3"
-              placeholder="Sua senha"
-              name="client_password"
-              {...register("client_contato", {
-                required: "Informe seu senha para continuar",
-            
+              placeholder="Seu cpf"
+              name="client_cpf"
+              {...register("client_cpf", {
+                required: "Informe um CPF valido",
+                pattern: {
+                  value: /\d+/,
+                  message: "Apenas Números",
+                },
                 minLength: {
-                  value: 6,
-                  message: "Senha precisa ter no minimo 6 caracteres",
+                  value: 11,
+                  message: "O CPF deve ter 11 números",
                 },
               })}
               onChange={(e) => {
-                setCustomer({ ...customer, password: [e.target.value] }); //pega tudo de custumer e atualiza apenas o
+                makeLogin({ ...customer, cpf: [e.target.value] }); //pega tudo de custumer e atualiza apenas o
               }}
             />
             <ErrorMessage
               errors={errors}
-              name="client_password"
+              name="client_cpf"
               render={({ messages }) => {
                 console.log("messages", messages);
                 return messages

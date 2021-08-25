@@ -9,7 +9,7 @@ export function* requestPetshops() {
   const res = response.data;
   yield put(setPetshops(res.petshops));
 }
-
+//payload: objeto com os dados da requisição/action
 export function* requestPetshop(payload) {
   const response = yield call(api.get, `/petshop/${payload.id}`);
   const res = response.data;
@@ -49,7 +49,7 @@ export function* makePurchase() {
 
 export function* makeRegister() {
   const { userData } = yield select((state) => state.shop);
-  const response = yield call(api.post, "/auth/register", userData);
+  const response = yield call(api.post, "/auth/register",userData);
   const res = response.data;
 
   if (res.error) {
@@ -63,10 +63,29 @@ export function* makeRegister() {
   }
 
 }
+export function* makeLogin() {
+  const { user } = yield select((state) => state.shop);
+  const response = yield call(api.post, '/auth/login',user);
+  const res = response.data;
+  
+  if (res.error) {
+    Swal.fire({
+      icon: "error",
+      title: "Oopsss",
+      text:"Falha no login, tente de novo"
+      // text: res.message,
+    });
+    return false;
+  }
+  
+}
 
+
+//takeLatest: pega a ultima ação disparada
 export default all([
   takeLatest(types.REQUEST_PETSHOPS, requestPetshops),
   takeLatest(types.REQUEST_PETSHOP, requestPetshop),
   takeLatest(types.MAKE_PURCHASE, makePurchase),
   takeLatest(types.MAKE_REGISTER, makeRegister),
+  takeLatest(types.MAKE_LOGIN, makeLogin),
 ]);
