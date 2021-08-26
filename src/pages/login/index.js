@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux"; //dispara a action p/ a reducer atrav
 import { makeLogin as login } from "../../store/modules/shop/actions";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
-import Illustration from "../../assets/background_img2.jpg";
+import IllustrationLogin from "../../assets/loginLogo.svg";
 import LogoWhite from "../../assets/logo-white.png";
 import { Link, useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -41,18 +41,26 @@ const Login = () => {
 
   return (
     <div className="container-fluid  login_body">
-      <img src={Illustration} className="imgFundo" />
+   
       <section className="login_container">
-        <div className="header">
-          <div className="logoContainer py-3 px-4 text-center">
+        <div className="header col-12 d-flex justify-content-center">
+           <div className="logoContainer py-3 px-4 text-center">
             <Link to="/">
               <img src={LogoWhite} className="img-fluid" alt="petfood"/>
             </Link>
           </div>
+
         </div>
         <div className="col-12 d-flex login_box">
-          <form
-            className="col-3
+          <div className="d-flex col-5 h-100 cadDestaque">
+            <div className="ImgDestaque"><img src={IllustrationLogin} alt="pet animal domestico "/></div>
+
+            <h1>Encontre o que há de melhor para seu pet</h1>
+            <p>E veja no map quais Petshops estão mais próximas de você</p>
+          </div>
+
+           <form
+            className="col-3 formCadastro
             "
             onSubmit={handleSubmit(onSubmit)}
           >
@@ -98,7 +106,7 @@ const Login = () => {
             <input
               type="password"
               className="form-control form-control-lg mt-3"
-              placeholder="Seu cpf"
+              placeholder="Seu CPF"
               name="client_cpf"
               {...register("client_cpf", {
                 required: "Informe um CPF valido",
@@ -130,7 +138,7 @@ const Login = () => {
               }}
             />
 
-            <button type="submit" className="btn btn-lg w-100 btn-secondary">
+            <button type="submit" className="btn btn-lg w-100 mt-3 btn-secondary">
               Finalizar Cadastro
             </button>
              <Link

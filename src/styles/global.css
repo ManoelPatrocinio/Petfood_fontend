@@ -2,12 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
 :root{
-    --primary:#06d6a0;
-    --secondary:#FA643D;
-    --background_dark: rgba(0,0,0,.8);
-    --FontColorPrimary: #fff;
+    --fontColorQueen:#06d6a0;
+    --Queen: #06d6a0;
+    --fontColorOrange:#FA643D;
+    --Orange:#FA643D;
+    --background_dark: #212127;
+    --background_dark_secondary:#26262d;
+    --background_light: #ffffff;
+    --FontColorWrite: #fff;
 }
-
 html,
 body{
     height: 100%;
@@ -16,6 +19,8 @@ body{
     letter-spacing: 0;
     font-size: 1rem;
     scroll-behavior: smooth;
+    background-color: var(--background_light);
+
 }
 
 body::-webkit-scrollbar {
@@ -28,17 +33,16 @@ body::-webkit-scrollbar-thumb {
 }
 
 .btn-secondary{
-    background-color: var(--secondary) !important;
+    background-color: var(--Orange) !important;
 }
 
-.btn-primary{
-    background-color:  var(--primary) !important;
+.btn-primary,
+.bg-primary
+{
+    background-color:  var(--Queen) !important;
 }
 
 
-.bg-primary{
-    background-color:  var(--primary) !important;
-}
 
 input[type='text'],
 input[type='email'],
@@ -69,8 +73,8 @@ input[type='date']:disabled{
 .btn-secondary:active,
 .btn-secondary:disabled,
 .btn-secondary:hover{
-    background-color: var(--secondary) !important;
-    border-color: var(--secondary);
+    background-color: var(--Orange) !important;
+    border-color: var(--Orange);
 }
 
 .badge{
@@ -84,7 +88,7 @@ input[type='date']:disabled{
 }
 
 .badge.badge-secondary{
-    background: var(--secondary);
+    background: var(--Orange);
 }
 
 

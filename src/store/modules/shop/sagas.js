@@ -67,7 +67,7 @@ export function* makeLogin() {
   const { user } = yield select((state) => state.shop);
   const response = yield call(api.post, '/auth/login',user);
   const res = response.data;
-  
+  console.log(res)
   if (res.error) {
     Swal.fire({
       icon: "error",

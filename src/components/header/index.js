@@ -7,8 +7,7 @@ import { useSelector } from "react-redux";
 
 
 const Header = ({ whiteVersion, hideSideBar }) => {
-    const { cart } = useSelector((state) => state.shop);
-    const {user}   = useSelector((state) => state.shop);
+    const { cart,user } = useSelector((state) => state.shop);
 
   // evento para abrir a sidebar da sacola de itens,será disparada para toda aplicação
   const openDrawer = () => {
@@ -47,27 +46,34 @@ const Header = ({ whiteVersion, hideSideBar }) => {
       <div className="ContainerUserAndCart d-flex">
         <div className="dropdown">
           <div className="Userperfil d-flex">
+          {!user.email ? 
+            (  
+              <>
               <button className="d-flex" type="button" id="dropdownMenuButtonPerfil" data-bs-toggle="dropdown" aria-expanded="false">
                   <i className="fas fa-user"></i>
                 <span>                                                   
-                  <p id="ola"> Olá </p>
+                  <p id="ola"> Olá</p>
                   <p>Minha conta</p>
                 </span>   
 
               </button>
 
               <ul className="dropdown-menu" id="menuHeader" aria-labelledby="dropdownMenuButtonPerfil">
-                <li><a className="dropdown-item" href="#">Login</a></li>
-
-                <li><a className="dropdown-item" href="#">Cadastre-se</a></li>
+                <li><Link to="/login" className="dropdown-item"> Login</Link> </li>
+                <li><Link to="/cadastro" className="dropdown-item"> Cadastre-se</Link> </li>
               </ul>
+           </>
+            ) : (
+            <>
+              <div className="userLogado d-flex align-items-end">
+                 <i className="fas fa-user"></i>
+                 <span>{user.email.substring(0,user.email.indexOf("@"))  }</span>
+              </div>
+            </>
+            )}
           </div>
         </div>
         {!hideSideBar && (
-          // <button onClick={() => openDrawer()} className="btn cart-button">
-          //   <span className="mdi mdi-cart"></span>({cart.length})
-          // </button>
-
           <button type="button"onClick={() => openDrawer()} className="btn cart-button position-relative">
             <span className="mdi mdi-cart"></span>
             <span className="position-absolute top-0 start-80 translate-middle rounded-circle">

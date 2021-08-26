@@ -1,10 +1,9 @@
 import { useState, React } from "react";
 import { useDispatch } from "react-redux"; //dispara a action p/ a reducer atravez do UI
-import { makeRegister as setUserData, setCustomer as setStoreCustmer } from "../../store/modules/shop/actions";
+import { makeRegister as setUserData } from "../../store/modules/shop/actions";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
-import Header from "../../components/header";
-import Illustration from "../../assets/background_img2.jpg";
+import IllustrationCadastro from "../../assets/manAndDog.svg"
 import LogoWhite from "../../assets/logo-white.png";
 import { Link,useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -27,22 +26,7 @@ const Cadastro = () => {
     birthday: "",
   });
 
-  const [customer, setCustomer] = useState({
-    external_id: new Date().getTime().toString(),
-    name: '',
-    type: 'individual',
-    country: 'br',
-    email: '',
-    documents: [
-      {
-        type: 'cpf',
-        number: '',
-      },
-    ],
-    phone_numbers: [''],
-    birthday: '',
-  });
-
+ 
   const goToCheckOut = () => {
     dispatch(setUserData(userData));
     
@@ -62,9 +46,8 @@ const Cadastro = () => {
 
   return (
     <div className="container-fluid  cadastro_body">
-      <img src={Illustration} className="imgFundo" />
-      <section className="cadastro_container">
-        <div className="header">
+      <section className="cadastro_container col-12 h-100 d-flex">
+        <div className="header col-12 d-flex justify-content-center">
            <div className="logoContainer py-3 px-4 text-center">
             <Link to="/">
               <img src={LogoWhite} className="img-fluid" alt="petfood"/>
@@ -72,9 +55,16 @@ const Cadastro = () => {
           </div>
 
         </div>
-        <div className="col-12 cadastro_box">
+        <div className="col-12 d-flex cadastro_box">
+          <div className="d-flex col-5 h-100 cadDestaque">
+            <div className="ImgDestaque"><img src={IllustrationCadastro} alt="pet animal domestico "/></div>
+
+            <h1>Encontre o que há de melhor para seu pet</h1>
+            <p>E veja no map quais Petshops estão mais próximas de você</p>
+          </div>
+
           <form
-            className="col-3"
+            className="col-3  formCadastro"
             onSubmit={handleSubmit(onSubmit)}
           >
             <div className="text-center mb-4 boxHeader">
@@ -250,7 +240,7 @@ const Cadastro = () => {
               }}
             />
 
-            <button type="submit" className="btn btn-lg w-100 btn-secondary">
+            <button type="submit" className="btn mt-3 btn-lg w-100 btn-secondary">
               Finalizar Cadastro
             </button>
           </form>

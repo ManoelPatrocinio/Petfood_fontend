@@ -11,38 +11,63 @@ body{
   width: 100vw;
   height: 100%;
   padding: 0;
-  background-color: rgba(0,0,0,.9);
-}
-.imgFundo{
-  width: 100%;
-  height: 100%;
-  opacity: .7;
-}
-.cadastro_container {
-  position: absolute;
-    height: 100%;
-    min-width: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  background-color: var(--background_dark);
   
 }
 
-.header {
-  width: 100%;
-  height: auto;
-  padding: 0;
+.cadastro_container {
+  height: 100% !important;
+  position: absolute;
+  flex-direction: column;
+  background: linear-gradient( 1deg , #212529, rgb(0 0 0 / 90%)); 
 }
+
 
 .cadastro_box {
+  justify-content: space-around;
+  height: 85%;
+}
 
-  margin: 1rem;
+.cadDestaque{
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--FontColorWrite);
+}
+
+.cadDestaque .ImgDestaque{
+  width: 100%;
+  height: 80%;
+}
+.ImgDestaque img{
+  width: 100%;
+  height: 100%;
   
 }
-.cadastro_box form {
-    margin: 0 auto;
+/* 
+.cadDestaque h1, p {
+  background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+  background-image: linear-gradient( 117deg,  rgba(123,216,96,1) 39.2%, rgba(255,255,255,1) 156.2% );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color:transparent;
+
+}
+ */
+.cadDestaque h1{
+  font-size: 1.7rem;
+}
+.cadDestaque p{
+
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+.formCadastro {
+    margin: 5% 0 0 0;
 }
 
 .boxHeader h2 {
@@ -121,12 +146,33 @@ button{
 */
 
 @media(max-width: 600px) {
+  .cadastro_container{
+    height: auto !important;
+  }
   .logoContainer {
-    margin: 0 15%;
+    margin: 0 !important;
   }
-    .cadastro_box form {
-      margin: 0 5%;
-      width: 47%;
+  .formCadastro{
+    margin: 1rem 0;
+    width: 100vw;
+    padding: 1rem;;
   }
+  .cadastro_box{
+    flex-direction: column !important;
+   
+  }
+  .cadDestaque{
+    width: 100vw;
+    height: 47vh !important;
+  }
+  .cadDestaque h1 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .cadDestaque p {
+    margin-bottom: .5rem;
+    width: 100%;
+    text-align: center;
+}
 
 }
