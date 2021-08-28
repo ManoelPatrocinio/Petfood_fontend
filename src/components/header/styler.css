@@ -36,7 +36,7 @@
 }
 .containerSearch i{
   font-size: 1.7rem;
-  color: var(--FontColorWrite);
+  color: var(--fontColorQueen);
   display: block;
 }
 .containerSearch img{
@@ -147,7 +147,7 @@
   }
 
   .menuMobile{
-    color: var(--FontColorWrite);
+    color: var(--fontColorQueen);
     width: 3.75rem;
     height: 3.75rem;
     align-items: center;
@@ -157,7 +157,7 @@
     display: none !important;
   }
   .logoContainer{
-    width: 10rem;
+    width: 28rem;
     margin: 0 9% !important;
   }
   .cart-button{

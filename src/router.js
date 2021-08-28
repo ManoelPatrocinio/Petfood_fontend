@@ -4,6 +4,7 @@ import "./styles/global.css";
 import Cadastro from "./pages/cadastro";
 import Login from "./pages/login";
 import Sidebar from "./components/sidebar";
+import MenuSidebar from "./components/menu_sidebar";
 import Checkout from "./pages/checkout";
 import Petshop from "./pages/petshop";
 import Home from "./pages/home";
@@ -20,6 +21,7 @@ const Routes = () => {
         <Route path="/cadastro" exact component={Cadastro} />
         <Route path="/login" exact component={Login} />
         <Sidebar />
+        <MenuSidebar/>
       </Router>
     </>
   );

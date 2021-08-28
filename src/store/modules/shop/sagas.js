@@ -56,26 +56,32 @@ export function* makeRegister() {
     Swal.fire({
       icon: "error",
       title: "Oopsss",
-      text:"Falha no cadastro, verifique seus dados"
-      // text: res.message,
+      text: res.data.message,
     });
     return false;
   }
-
+  
 }
+
 export function* makeLogin() {
   const { user } = yield select((state) => state.shop);
   const response = yield call(api.post, '/auth/login',user);
   const res = response.data;
-  console.log(res)
   if (res.error) {
     Swal.fire({
       icon: "error",
       title: "Oopsss",
-      text:"Falha no login, tente de novo"
+      text: res.data.message,
       // text: res.message,
     });
     return false;
+  }else{
+    Swal.fire({
+      icon: "success",
+      title: "foi",
+      text: res.data.message,
+      // text: res.message,
+    });
   }
   
 }

@@ -14,6 +14,12 @@ const Header = ({ whiteVersion, hideSideBar }) => {
     const event = new CustomEvent("openCart");
     window.dispatchEvent(event);
   };
+  // evento para abrir a sidebar da sacola de itens,será disparada para toda aplicação
+  const openMenuSidebar = () => {
+    const event = new CustomEvent("openMenu");
+    window.dispatchEvent(event);
+  };
+
   return (
     <div className="col-12 d-flex header-global">
 
@@ -22,15 +28,14 @@ const Header = ({ whiteVersion, hideSideBar }) => {
           <i className="fas fa-street-view"> </i>
           Próximo de ti
         </button> */}
-        <div className="menuMobile">
+        <button  type="button" onClick={() => openMenuSidebar()} className="menuMobile ">
           <i class="fas fa-bars"></i>
-        </div>
+        </button>
 
         <form className="formSearch d-flex">
-
-            <button>
-                <img src={SearchIcon} />
-            </button>
+          <button>
+              <img src={SearchIcon} />
+          </button>
           <input type="text"
             className="form-control form-control-lg "
             placeholder="O que seu pet precisa ?"/>

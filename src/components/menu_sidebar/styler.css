@@ -1,0 +1,105 @@
+.Menusidebar{
+    background-color: var(--background_light);
+    flex-direction: column;
+    color: var(--fontColorGray);
+    position: relative;
+}
+.perfilImgAndName{
+    height: 10%;
+    border-bottom: 2px solid var(--Queen);
+    margin: 0;
+}
+.containerImgPerfil{
+    width: 27%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.containerImgPerfil i{
+    width: 100%;
+    height: 78%;
+    background: #cecece;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10%;
+    font-size: 2rem;
+}
+
+
+.userInfo{
+    width: 70%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#userName{
+    font-size: 1rem;
+    font-weight: 600;
+}
+#userEmail{
+    font-size: .7rem;
+}
+.menuOptions{
+    height: 90%;
+}
+
+.formSearchMobile{
+    background-color: #f6f5f5;
+    height: 10%;
+}
+.formSearchMobile input, .btn_Search{
+    background-color: transparent;
+    border: none;
+}
+.formSearchMobile input{
+    width: 80%;
+}
+.btn_Search{
+    width: 20%;
+    height: 100%;
+    font-size: 1.3rem;
+    color: var(--fontColorQueen);
+    align-items: center;
+}
+
+.categoriasMobile{
+    margin: 1.1rem 0;
+    padding-left: 0 !important;
+}
+.categoriasMobile h2{
+    font-size: 1.2rem;
+    color: var(--fontColorQueen);
+    padding: 0 .7em;
+    
+}
+
+.categoriasMobile li{
+    font-weight: 600;
+    color: #8e8d8d;
+    padding: .4rem 1rem;
+    border-bottom: 2px solid #f6f5f5;
+
+}
+
+.FormRastrear_pedidos{
+    width: 100%;
+    height: 17%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+.FormRastrear_pedidos>input,
+.FormRastrear_pedidos>button{
+    height: 50% !important;
+    border-radius: 0;
+}
+.FormRastrear_pedidos input::placeholder {
+   text-align: center;
+}
+
+.FormRastrear_pedidos button{
+    font-weight: 600;
+}
+
