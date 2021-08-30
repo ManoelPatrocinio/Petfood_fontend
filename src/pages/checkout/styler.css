@@ -18,3 +18,41 @@
     height: 100%;
     overflow-y: auto;
 }
+
+
+/*
+*
+* Styler da mobile- phones- 
+*
+*/
+
+@media(max-width: 600px){
+   
+  #socolaCheckout{
+      display: none;
+  }
+  .checkoutForm{
+      width: 100%;
+  }
+
+   #MyAccountMobile {
+    transform: translate(7px, 72px) !important;
+    min-width: 16rem;
+  }
+  #MyAccountMobile li{
+      text-align: center;
+  }
+}
+
+
+/*
+*
+* Styler da mobile- tablet- 
+*
+*/
+
+  
+@media (min-width:600px) and (max-width:961px) {
+   
+  
+}

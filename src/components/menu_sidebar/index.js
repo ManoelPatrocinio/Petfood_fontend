@@ -43,7 +43,7 @@ const MenuSidebar = () => {
                   Minha conta
               </button>
 
-              <ul className="dropdown-menu" id="menuHeader" aria-labelledby="dropdownMenuButtonPerfil">
+              <ul className="dropdown-menu" id="MyAccountMobile" aria-labelledby="dropdownMenuButtonPerfil">
                 <li><Link to="/login" className="dropdown-item"> Login</Link> </li>
                 <li><Link to="/cadastro" className="dropdown-item"> Cadastre-se</Link> </li>
               </ul>

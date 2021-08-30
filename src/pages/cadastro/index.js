@@ -56,15 +56,16 @@ const Cadastro = () => {
 
         </div>
         <div className="col-12 d-flex cadastro_box">
-          <div className="d-flex col-5 h-100 cadDestaque">
-            <div className="ImgDestaque"><img src={IllustrationCadastro} alt="pet animal domestico "/></div>
-
-            <h1>Encontre o que há de melhor para seu pet</h1>
-            <p>E veja no map quais Petshops estão mais próximas de você</p>
+          <div className="d-flex col-6 h-100 cadDestaque">
+            <div className="ImgDestaque col-12"><img src={IllustrationCadastro}  className="col-12 h-100" alt="pet animal domestico "/></div>
+            <div className="col-12 text-align-center FraseDetaque"> 
+              <h1>Encontre o que há de melhor para seu pet</h1>
+              <p >E veja no map quais Petshops estão mais próximas de você</p>
+            </div>
           </div>
 
           <form
-            className="col-3  formCadastro"
+            className="col-4 h-100  formCadastro"
             onSubmit={handleSubmit(onSubmit)}
           >
             <div className="text-center mb-4 boxHeader">

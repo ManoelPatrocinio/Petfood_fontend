@@ -56,7 +56,7 @@ export function* makeRegister() {
     Swal.fire({
       icon: "error",
       title: "Oopsss",
-      text: res.data.message,
+      text: "Erro no cadastro, verifique suas informações",
     });
     return false;
   }
@@ -67,22 +67,18 @@ export function* makeLogin() {
   const { user } = yield select((state) => state.shop);
   const response = yield call(api.post, '/auth/login',user);
   const res = response.data;
+
   if (res.error) {
     Swal.fire({
       icon: "error",
       title: "Oopsss",
-      text: res.data.message,
+      text: res.message,
+      //  "Informação inválida ",
       // text: res.message,
     });
     return false;
-  }else{
-    Swal.fire({
-      icon: "success",
-      title: "foi",
-      text: res.data.message,
-      // text: res.message,
-    });
   }
+  
   
 }
 

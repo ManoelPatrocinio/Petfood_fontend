@@ -120,15 +120,15 @@ const Checkout = () => {
       })),
       split_rules: getSplitRules(),
     });
-  }, [total]);
+  }, [total]); 
 
   return (
     <div className="h-100">
       <Header hideSideBar />
-      <div className="container mt-4">
-        <div className="row">
+      <div className="container mt-5">
+        <div className="row ">
           {/* formulario de  finalização de compra */}
-          <div className="col-6">
+          <div className="col-6 checkoutForm">
             <span className="section-title">Dados de Entrega</span>
 
             <div className="row mb-3">
@@ -162,7 +162,7 @@ const Checkout = () => {
             </div>
 
             <div className="row mb-3">
-              <div className="col-5">
+              <div className="col-4">
                 <input
                   type="number"
                   placeholder="Número"
@@ -182,7 +182,7 @@ const Checkout = () => {
                   }
                 />
               </div>
-              <div className="col-2 pl-0">
+              <div className="col-3 pl-0">
                 <input
                   type="text"
                   placeholder="UF"
@@ -269,7 +269,7 @@ const Checkout = () => {
             </div>
           </div>
           {/* box dos item da sacola */}
-          <div className="col-6">
+          <div className="col-6" id="socolaCheckout">
             <div className="box col mb-4 boxsidebar">
               <h5>Minha Sacola ({cart.length}) </h5>
               <div className="row products boxsidebarItem">

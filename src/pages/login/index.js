@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux"; //dispara a action p/ a reducer atrav
 import { makeLogin as login } from "../../store/modules/shop/actions";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
-import IllustrationLogin from "../../assets/loginLogo.svg";
-import LogoWhite from "../../assets/logo-white.png";
+import IllustrationLogin from "../../assets/loginLogoGreen.svg";
+import Logo from "../../assets/logo.png";
 import { Link, useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
 import "./style.css";
@@ -26,6 +26,7 @@ const Login = () => {
     dispatch(login(customer));
   };
   const onSubmit = () =>{
+    // verificar tratamento de erro
     goToCheckOut() // salva os dados no customer
     Swal.fire({
       icon: "success",
@@ -44,24 +45,24 @@ const Login = () => {
    
       <section className="login_container">
         <div className="header col-12 d-flex justify-content-center">
-           <div className="logoContainer py-3 px-4 text-center">
+           <div className="logoContainer py-3 px-4 text-center" >
             <Link to="/">
-              <img src={LogoWhite} className="img-fluid" alt="petfood"/>
+              <img src={Logo} className="img-fluid" alt="petfood"/>
             </Link>
           </div>
 
         </div>
-        <div className="col-12 d-flex login_box">
-          <div className="d-flex col-5 h-100 cadDestaque">
-            <div className="ImgDestaque"><img src={IllustrationLogin} alt="pet animal domestico "/></div>
+        <div className="col-12 d-flex  login_box">
+          <div className="d-flex col-6 h-100 cadDestaque" id="cadDestaqueLogin">
+            <div className="ImgDestaque"><img src={IllustrationLogin} className="col-12 h-100" alt="pet animal domestico "/></div>
 
             <h1>Encontre o que há de melhor para seu pet</h1>
             <p>E veja no map quais Petshops estão mais próximas de você</p>
           </div>
 
            <form
-            className="col-3 formCadastro
-            "
+            className="col-4 formCadastro
+            " id="formLogin"
             onSubmit={handleSubmit(onSubmit)}
           >
             <div className="text-center mb-4 boxHeader">
@@ -146,6 +147,13 @@ const Login = () => {
                 className="linkPcadastro"
               >
                 Não tem uma conta, <span>clique aqui</span> e cadastre-se
+              </Link>
+              <div id="LineBottomLogin"></div>
+              <Link
+                to="/"
+                id="linkRemenberPassword"
+              >
+                Esqueceu sua senha
               </Link>
           
           </form>
