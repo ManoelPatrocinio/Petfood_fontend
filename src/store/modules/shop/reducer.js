@@ -45,6 +45,7 @@ const INITTIAL_STATE = {
     phone:"",
     cpf:"",
   },
+  isSignedIn:{ },
   user:{
     email:"",
     cpf:"",
@@ -70,6 +71,11 @@ function shop(state = INITTIAL_STATE, action) {
     case types.MAKE_LOGIN: {
       return produce(state, (draft) => {
         draft.user = action.user;
+      });
+    }
+    case types.SET_USER: {
+      return produce(state, (draft) => {
+        draft.isSignedIn = action.isSignedIn;
       });
     }
     case types.SET_PETSHOPS: {

@@ -39,4 +39,8 @@ export function makeRegister(userData) {
 export function makeLogin(user) {
   return { type: types.MAKE_LOGIN,user };
 }
+// p/ receber os dados do user depois do login
+export function setUser(isSignedIn) {
+  return { type: types.SET_USER, isSignedIn };
+}
 

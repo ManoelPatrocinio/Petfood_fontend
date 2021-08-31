@@ -18,6 +18,20 @@
     object-fit: cover;
     border-radius: 50%;
 }
+#categoriaFrase{
+    color: var(--fontColorQueen);
+    width: 100vw;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+#categoriaFrase p {
+    /* text-shadow: 0.3rem 1px 8px rgb(0 0 0 / 27%); */
+    margin:0 !important;
+
+}
 
 #slideDestaques{
     height: 16.875rem;
@@ -57,17 +71,68 @@
 .container_destaques{
     height: 100%;
     background-color: #fff;
+    padding: 1.5rem;
 }
 
 .HomeTitle{
-    font-family: Roboto;
+    font-family: 'Open Sans';
     font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: 1.4rem;
     line-height: 28px;
-    color: #6F6B6B;
-  }
+    color: #77797b;
+    padding-left: 1rem;
+}
 
+.global_footer,
+.infor_apps,
+.sagurança_pagamento,
+.copyrightETC,
+.social_myConta {
+    flex-direction: column;
+}
+
+.global_footer{
+    padding: 1.5rem 0 0 0;
+    border-top: 1px solid #a8a8a9;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyrightETC,
+.copyrightETC p{
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+.footerTitle{
+    font-family: 'Roboto Condensed';
+    font-size: 1.2rem;
+    color: #212529;
+}
+.footerList{
+    padding-left: 0 !important;
+
+}
+.footerList li{
+    font-size: 1rem;
+    color: #6F6B6B;
+}
+#imgCartoes{
+    width: 14rem;
+    height: 2.5rem;
+}
+.wrapperImg img{
+    width: 8rem;
+    height: 3rem;
+    margin-right: 2%;
+}
+.social_myConta img{
+    width: 8rem;
+    height: 2rem;
+}
 
 /* 
 *

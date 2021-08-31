@@ -1,7 +1,7 @@
 import { takeLatest, all, call, put, select } from "redux-saga/effects"; // vincula uma função a uma action
 import types from "./types";
 import api from "../../../services/api";
-import { setPetshops, setPetshop} from "./actions";
+import { setPetshops, setPetshop, setUser} from "./actions";
 import Swal from "sweetalert2";
 
 export function* requestPetshops() {
@@ -67,7 +67,8 @@ export function* makeLogin() {
   const { user } = yield select((state) => state.shop);
   const response = yield call(api.post, '/auth/login',user);
   const res = response.data;
-
+  yield put(setUser(res.user));
+  
   if (res.error) {
     Swal.fire({
       icon: "error",

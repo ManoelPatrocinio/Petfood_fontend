@@ -11,6 +11,7 @@ const types = {
   MAKE_PURCHASE: "@shop/MAKE_PURCHASE",
   MAKE_REGISTER: "@shop/MAKE_REGISTER",
   MAKE_LOGIN: "@shop/MAKE_LOGIN",
+  SET_USER: "@shop/SET_USER",
 
 };
 

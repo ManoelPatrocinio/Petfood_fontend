@@ -7,7 +7,9 @@ import { useSelector } from "react-redux";
 
 
 const Header = ({ whiteVersion, hideSideBar }) => {
-    const { cart,user } = useSelector((state) => state.shop);
+
+  const { cart,isSignedIn } = useSelector((state) => state.shop);
+
 
   // evento para abrir a sidebar da sacola de itens,será disparada para toda aplicação
   const openDrawer = () => {
@@ -51,7 +53,7 @@ const Header = ({ whiteVersion, hideSideBar }) => {
       <div className="ContainerUserAndCart d-flex">
         <div className="dropdown">
           <div className="Userperfil d-flex">
-          {!user.email ? 
+          {!isSignedIn.name ? 
             (  
               <>
               <button className="d-flex" type="button" id="dropdownMenuButtonPerfil" data-bs-toggle="dropdown" aria-expanded="false">
@@ -70,9 +72,9 @@ const Header = ({ whiteVersion, hideSideBar }) => {
            </>
             ) : (
             <>
-              <div className="userLogado d-flex align-items-end">
+              <div className="userLogado d-flex ">
                  <i className="fas fa-user"></i>
-                 <span>{user.email.substring(0,user.email.indexOf("@"))  }</span>
+                 <span>{isSignedIn.name.split(" ", 1)}</span>
               </div>
             </>
             )}

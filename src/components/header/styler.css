@@ -1,7 +1,7 @@
 .header-global {
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   background-color: var(--background_light);
 }
 .ContainerUserAndCart{
@@ -16,6 +16,7 @@
 }
 .containerSearch{
   width: 17.313rem;
+  min-width: 17.313rem;
   margin: 0 ;
   justify-content: center;
   align-items: center;
@@ -71,10 +72,12 @@
 
 .logoContainer{
   width: 17.313rem;
+  min-width: 17.313rem;
 }
 
 .ContainerUserAndCart{
   width: 17.313rem;
+  min-width: 17.313rem;
   justify-content: flex-end;
 }
 .Userperfil{
@@ -88,13 +91,16 @@
   text-align: left;
   align-items: center;
 }
+
 .Userperfil i,
-.userLogado i{
+.userLogado i,
+.userLogado span{
   color: var(--fontColorQueen);
   font-size: 1.5rem;
   margin: 0 5px 0 0;
+  line-height: 0;
 }
-.Userperfil p,.userLogado span{
+.Userperfil p{
   color: var(--fontColorQueen);
   margin: 0;
   padding: 0;
