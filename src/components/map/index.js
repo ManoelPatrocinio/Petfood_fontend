@@ -13,7 +13,7 @@ const Map = ({ petshops }) => {
         bootstrapURLKeys={{ key: "AIzaSyCWBxlNpEtAk1yi9lgZ5WeW89b5pdva0Ek" }}
         //latitude e longitude
         center={mapCenter}
-        defaultZoom={15}
+        defaultZoom={17}
       >
         {petshops.map((p) =>(
           <Marker petshop={p} lat={p.location.lat} lng={p.location.lng}/>

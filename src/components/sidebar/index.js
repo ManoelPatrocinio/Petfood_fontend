@@ -14,9 +14,7 @@ const Sidebar = () => {
   const total = cart.reduce((total,product)=>{//percorre cada item do carrinho para somar o total
       return total += product.preco
   },0)
-  const widthSize = {
-    size: 0.75
-  };
+
   const [opened, setOpened] = useState(false);
 
   //   escuto o evendo disparado no Header, para exibir o sidebar Sacola
@@ -33,7 +31,7 @@ const Sidebar = () => {
         setOpened(visible);
       }}
       position="right"
-      size={widthSize.size}
+     
     >
       <div className="container-fluid pt-3 sidebar">
         <h5>Minha Sacola ({cart.length})</h5>

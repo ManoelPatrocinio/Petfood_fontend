@@ -113,7 +113,7 @@
   font-size: 1rem;
 }
 
-.dropdown-menu{
+.Userperfil > .dropdown-menu{
   transform: translate(25px, 60px) !important;
   min-width: 8rem;
 }
@@ -163,8 +163,16 @@
     display: none !important;
   }
   .logoContainer{
-    width: 28rem;
+    width: 8rem !important;
+    min-width: 8rem;
     margin: 0 9% !important;
+  }
+  .ContainerUserAndCart{
+     width: 3.438rem;
+     min-width: 3.438rem;
+  }
+  .containerSearch{
+    min-width: 2.1rem !important ;
   }
   .cart-button{
     margin-top: 0;

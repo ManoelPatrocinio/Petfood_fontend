@@ -4,13 +4,14 @@
 import produce from "immer"; // fornece uma capia do state para alteração
 import types from "./types";
 
+
 const INITTIAL_STATE = {
   petshops: [],
   petshop: {},
   petshopMapSelected: null,
   mapCenter: {
-    lat: -23.561684,
-    lng: -46.625378,
+    lat: '',
+    lng: '',
   },
   cart: [],
   transactionFee: 0.1, //taxa de transação para o marketPlace
@@ -54,7 +55,21 @@ const INITTIAL_STATE = {
   items: [],
   split_rules: [],
   
-}; 
+};
+
+
+// resgatando a posição do do usuario
+if ('geolocation' in navigator) {
+  navigator.geolocation.getCurrentPosition(function(position){
+    INITTIAL_STATE.mapCenter.lat = position.coords.latitude
+    INITTIAL_STATE.mapCenter.lng = position.coords.longitude
+      console.log("latitude do man",INITTIAL_STATE.mapCenter)
+  },function(error){
+      console.log(error)
+  })
+} else {
+  alert("Desculpe, o serviço de geolocalização não é susportado nesse navegador")
+}
 
 function shop(state = INITTIAL_STATE, action) {
   switch (action.type) {

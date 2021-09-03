@@ -10,10 +10,6 @@ const MenuSidebar = () => {
   const widthSize = {
     size: 0.75
   };
-  const history = useHistory();
-  const {} = useSelector((state)=> state.shop)
-
-
   const [opened, setOpenedMenu] = useState(false);
    //   escuta o evento disparado no Header, para exibir o menu
    useEffect(() => {

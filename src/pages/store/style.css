@@ -22,7 +22,7 @@
     color: var(--fontColorQueen);
     width: 100vw;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-family: 'Roboto Condensed', sans-serif;
 
 }
@@ -90,6 +90,9 @@
 .copyrightETC,
 .social_myConta {
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
 }
 
 .global_footer{
@@ -100,19 +103,22 @@
 }
 
 .copyrightETC,
-.copyrightETC p{
+.copyrightETC p,a,button{
     text-align: center;
     font-size: 12px;
     margin-bottom: .5rem;
     font-weight: 600;
+    color: #6F6B6B;
 }
 
 .footerTitle{
     font-family: 'Roboto Condensed';
     font-size: 1.2rem;
     color: #212529;
+    width: 100%;
 }
 .footerList{
+    width: 100%;
     padding-left: 0 !important;
 
 }
@@ -129,9 +135,27 @@
     height: 3rem;
     margin-right: 2%;
 }
-.social_myConta img{
-    width: 8rem;
-    height: 2rem;
+.SocialMediaIcon,
+.SocialMediaIcon img{
+    width: 2rem;
+    margin-right: 2%;
+}
+
+
+#btnCreditImg:hover{
+    color: var(--fontColorQueen);
+
+}
+
+#ulCreditoImg{
+    position: absolute;
+    inset: auto auto 0px 0px;
+    margin: 0px;
+    transform: translate(-4px, -20px);
+}
+#ulCreditoImg a{
+    font-size: 1rem !important;
+
 }
 
 /* 
