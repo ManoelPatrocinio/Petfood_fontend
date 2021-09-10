@@ -1,7 +1,6 @@
 html,
-body{
+body {
   font-size: 1rem;
-
 }
 
 .cadastro_body {
@@ -9,72 +8,16 @@ body{
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100%;
   padding: 0;
-  background: linear-gradient(240deg,#12c392 33%,#222223 33%,#171a1d 33% );
-  
+  background-color: #fdfdfd;
 }
-
-.cadastro_container {
-  height: auto !important;
-  position: absolute;
-  flex-direction: column;
-  background: linear-gradient(240deg,#12c392 33%,#222223 33%,#171a1d 33% );
+.header {
+  background-color: #fff;
+  height: 10%;
 }
 
 
-.cadastro_box {
-  justify-content: space-around;
-  height: 85%;
-  
-}
-
-.cadDestaque{
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  color: var(--FontColorWrite);
-}
-
-.cadDestaque .ImgDestaque{
-  width: 63%;
-  height: 60vh;
-}
-
-.FraseDetaque{
-  text-align: center;
-  color: var(--FontColorWrite);  
-
-}
-.FraseDetaque h1{
-  font-size: 1.7rem;
-}
-.FraseDetaque p{
-
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-}
-.formCadastro {
-    margin: 5% 0 0 0;
-}
-.boxHeader h2 {
-  margin-bottom: 0;
-  font-size: 2rem;
-  color: #fff;
-}
-.boxHeader small {
-  width: 100%;
-  color: #fff;
-  font-size: 1rem;
-}
-
-.alertCadInput {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #ebef06;
-}
-
-button{
+button {
   margin-top: 1rem;
 }
 
@@ -104,7 +47,6 @@ button{
   color: #eee;
   font-size: 1.2rem;
   font-weight: 600;
-
 }
 
 .social-list {
@@ -124,92 +66,3 @@ button{
   display: flex;
 }
 
-
-/*
-*
-* Styler da sessão rodapé-mobile
-*
-*/
-
-@media(max-width: 600px){
-  .cadastro_body{
-    background: linear-gradient( 1deg , #212529, rgb(0 0 0 / 90%))
-  }
-  .cadastro_container{
-    height: auto !important;
-    background:linear-gradient( 1deg , #212529, #17191b);
-  }
-  .logoContainer {
-    height: auto;
-    margin: 0 !important;
-  }
-  .formCadastro{
-    margin:  0 auto;
-    width: 90vw;
-    padding: 1rem;;
-  }
-  .cadastro_box{
-    flex-direction: column !important;
-   
-  }
-  .cadDestaque{
-    width: 100vw;
-    height: 47vh !important;
-    margin-bottom: 1.2rem;
-  }
-  .cadDestaque h1 {
-    font-size: 1rem;
-    font-weight: 700;
-  }
-  .cadDestaque p {
-    margin-bottom: .5rem;
-    width: 100%;
-    text-align: center;
-  }
-  .cadDestaque .ImgDestaque{
-     height: 70%;
-  }
-
-}
-
-@media (min-width:600px) and (max-width:961px) {
-  .cadastro_body{
-    background: linear-gradient( 1deg , #212529, rgb(0 0 0 / 90%))
-  }
-  .cadastro_container{
-    height: auto !important;
-    background:linear-gradient( 1deg , #212529, #17191b);
-  }
-  .logoContainer {
-    margin: 0 !important;
-  }
-  .formCadastro{
-  
-    margin: 0 auto;
-    width: 64vw;
-    padding: 1rem;
-  
-  }
-  .cadastro_box{
-    flex-direction: column !important;
-   
-  }
-  .cadDestaque{
-    width: 100vw;
-    height: 47vh !important;
-  }
-  .cadDestaque h1 {
-    font-size: 1rem;
-    font-weight: 700;
-  }
-  .cadDestaque p {
-    margin-bottom: .5rem;
-    width: 100%;
-    text-align: center;
-  }
-
-  .cadDestaque .ImgDestaque{
-    height: 47vh;
-  }
-
-}

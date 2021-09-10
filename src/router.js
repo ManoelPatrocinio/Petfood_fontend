@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
 import "./styles/global.css";
 import Cadastro from "./pages/cadastro";
@@ -10,18 +15,50 @@ import Petshop from "./pages/petshop";
 import Home from "./pages/home";
 import Store from "./pages/store";
 
+import { isAuthenticated } from "./services/auth";
+
+// define as rotas que só serão exibidas se o user estiver auth
+ //state:para não perder o historico de rotas do user
+
+const PrivateRoute = ({ component: Component, ...rest }) => (
+  <Route
+    {...rest}
+    render={(props) =>
+      isAuthenticated() ? (
+        <Component {...props} />
+      ) : (
+        <Redirect
+          to={{ pathname: "/login", state: { from: props.location } }}
+        />
+      )
+    }
+  />
+);
+
 const Routes = () => {
   return (
     <>
       <Router>
-        <Route path="/" exact component={Home} />
-        <Route path="/store" exact component={Store} />
-        <Route path="/petshop/:id" exact component={Petshop} />
-        <Route path="/checkout" exact component={Checkout} />
-        <Route path="/cadastro" exact component={Cadastro} />
-        <Route path="/login" exact component={Login} />
+        <Switch>
+          <Route path="/" exact component={Home} />
+        </Switch>
+        <Switch>
+          <Route path="/store" exact component={Store} />
+        </Switch>
+        <Switch>
+          <Route path="/petshop/:id" exact component={Petshop} />
+        </Switch>
+        <Switch>
+          <PrivateRoute path="/checkout" exact component={Checkout} />
+        </Switch>
+        <Switch>
+          <Route path="/cadastro" exact component={Cadastro} />
+        </Switch>
+        <Switch>
+          <Route path="/login" exact component={Login} />
+        </Switch>
         <Sidebar />
-        <MenuSidebar/>
+        <MenuSidebar />
       </Router>
     </>
   );

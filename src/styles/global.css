@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 *,a{
     margin: 0;
     padding: 0;
@@ -110,7 +111,166 @@ input[type='date']:disabled{
     box-shadow:  0px 0px 11px 6px rgba(0, 0, 0, 0.08);
     border-radius: 5px;
     display: inline-block;
-    padding: 40px;
-    height: 95%;
-    margin-left: 15%;
+    padding: 28px;
+   
+}
+.alertCadInput {
+    font-size: 0.9rem;
+    /* font-weight: 600; */
+    color: #de4617;
+    margin-left: 2%;
+}
+
+/* estilo de elementos das pags de cadastro e login */
+
+.container_section {
+  height: 80% !important;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box_form_cantainer {
+  margin: 1rem 0 2rem 0;
+  height: auto;
+  width: 80%;
+  border-radius: 1.2rem;
+  box-shadow: 0px 0px 11px 6px rgb(0 0 0 / 8%);
+}
+
+.cardDestaque {
+  background-color:#06d6a0;
+  border-radius: 1.2rem 0 0 1.2rem;
+}
+
+.cardDestaque_boxImg {
+  width: 100%;
+  height: 80%;
+  justify-content: center;
+}
+.cardDestaque_boxImg img {
+  width: 83%;
+  height: 79%;
+  margin: 10% 0 0 9%;
+}
+
+.cardDestaque_boxSlogan {
+  height: 20%;
+   color: #ffffff;
+}
+
+.cardDestaque_boxSlogan p {
+  font-size: 1.5rem;
+  font-weight: 600;
+ 
+}
+
+.box-form {
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 8%);
+}
+
+.form {
+  position: relative;
+  color: #575757;
+  padding: 28px;
+}
+
+.form label {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.boxHeader {
+  color: #6d6c6c;
+}
+.boxHeader h2 {
+  margin-bottom: 0;
+  font-size: 1.7rem;
+}
+.required {
+  color: rgb(236, 15, 15);
+}
+
+
+/* medias query */
+
+
+@media (max-width: 600px) {
+  .container_section {
+    height: auto !important;
+  }
+  .logoContainer {
+    margin: 0 !important;
+  }
+  .boxHeader h2 {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+
+  .box_form_cantainer {
+    flex-direction: column !important;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none !important;
+  }
+  .cardDestaque {
+    width: 100% !important;
+    min-height: 29vh;
+    height: auto;
+  }
+
+ 
+  .cardDestaque_boxImg img {
+    width: 71% !important;
+    height: 100%;
+    margin: 0;
+  }
+
+  .box-form {
+    width: 100%;
+  }
+  .form {
+    width: 93%;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 961px) {
+  .container_section {
+    height: auto !important;
+  }
+  .logoContainer {
+    margin: 0 !important;
+  }
+
+  .box_form_cantainer {
+    flex-direction: column !important;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none !important;
+  }
+  .cardDestaque {
+    width: 100% !important;
+    height: 40vh;
+  }
+
+  .cardDestaque_boxImg img {
+    width: 46%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .box-form {
+    width: 100%;
+  }
+  .form {
+    width: 63%;
+    padding: 1rem;
+    margin: 0 auto;
+  }
 }

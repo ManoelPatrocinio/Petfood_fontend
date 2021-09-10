@@ -111,52 +111,6 @@
     color: #6F6B6B;
 }
 
-.footerTitle{
-    font-family: 'Roboto Condensed';
-    font-size: 1.2rem;
-    color: #212529;
-    width: 100%;
-}
-.footerList{
-    width: 100%;
-    padding-left: 0 !important;
-
-}
-.footerList li{
-    font-size: 1rem;
-    color: #6F6B6B;
-}
-#imgCartoes{
-    width: 14rem;
-    height: 2.5rem;
-}
-.wrapperImg img{
-    width: 8rem;
-    height: 3rem;
-    margin-right: 2%;
-}
-.SocialMediaIcon,
-.SocialMediaIcon img{
-    width: 2rem;
-    margin-right: 2%;
-}
-
-
-#btnCreditImg:hover{
-    color: var(--fontColorQueen);
-
-}
-
-#ulCreditoImg{
-    position: absolute;
-    inset: auto auto 0px 0px;
-    margin: 0px;
-    transform: translate(-4px, -20px);
-}
-#ulCreditoImg a{
-    font-size: 1rem !important;
-
-}
 
 /* 
 *

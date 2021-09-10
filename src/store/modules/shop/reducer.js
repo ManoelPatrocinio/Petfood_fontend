@@ -10,8 +10,8 @@ const INITTIAL_STATE = {
   petshop: {},
   petshopMapSelected: null,
   mapCenter: {
-    lat: '',
-    lng: '',
+    lat: -23.561684,
+    lng: -46.625378,
   },
   cart: [],
   transactionFee: 0.1, //taxa de transação para o marketPlace
