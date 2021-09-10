@@ -2,7 +2,7 @@ import { takeLatest, all, call, put, select } from "redux-saga/effects"; // vinc
 import types from "./types";
 import api from "../../../services/api";
 import { login } from "../../../services/auth";
-import { setPetshops, setPetshop, setUser} from "./actions";
+import { setPetshops, setPetshop} from "./actions";
 import Swal from "sweetalert2";
 
 export function* requestPetshops() {
@@ -68,9 +68,7 @@ export function* makeLogin() {
   const { user } = yield select((state) => state.shop);
   const response = yield call(api.post, '/auth/login',user);
   const res = response.data;
-  login(res.token ) //salve o token no local storage
-  yield put(setUser(res.user));
-  
+
   if (res.error) {
     Swal.fire({
       icon: "error",
@@ -80,6 +78,10 @@ export function* makeLogin() {
       // text: res.message,
     });
     return false;
+  }else{
+    console.log("valor salvo no local:", res.user.name);
+    login(res.token); //salva o token no local storage
+    localStorage.setItem("UserName", res.user.name); //salva o nome do user no local storage
   }
   
   
