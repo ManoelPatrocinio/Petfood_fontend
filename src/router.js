@@ -14,6 +14,7 @@ import Checkout from "./pages/checkout";
 import Petshop from "./pages/petshop";
 import Home from "./pages/home";
 import Store from "./pages/store";
+import Search from "./pages/search";
 
 import { isAuthenticated } from "./services/auth";
 
@@ -56,6 +57,9 @@ const Routes = () => {
         </Switch>
         <Switch>
           <Route path="/login" exact component={Login} />
+        </Switch>
+        <Switch>
+          <Route path="/search" exact component={Search} />
         </Switch>
         <Sidebar />
         <MenuSidebar />

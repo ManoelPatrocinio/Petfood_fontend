@@ -1,47 +1,106 @@
-
-.footerTitle{
-    font-family: 'Roboto Condensed';
-    font-size: 1.2rem;
-    color: #212529;
-    width: 100%;
+.footerTitle {
+  font-family: "Roboto Condensed";
+  font-size: 1.2rem;
+  color: #2f2f2fe8;
+  width: 100%;
+  text-align: left;
 }
-.footerList{
-    width: 100%;
-    padding-left: 0 !important;
-
+.footerList {
+  width: 100%;
+  padding-left: 0 !important;
 }
-.footerList li{
-    font-size: 1rem;
-    color: #6F6B6B;
+.card-segurança{
+  display: contents;
 }
-#imgCartoes{
-    width: 14rem;
-    height: 2.5rem;
+.Card-footer {
+  width: 25%;
 }
-.wrapperImg img{
-    width: 8rem;
-    height: 3rem;
-    margin-right: 2%;
+.footerList li {
+  font-size: 1rem;
+  color: #6f6b6b;
+}
+#imgCartoes {
+  width: 14rem;
+  height: 2.5rem;
+}
+.wrapperImg img {
+  width: 8rem;
+  height: 3rem;
+  margin-right: 2%;
 }
 .SocialMediaIcon,
-.SocialMediaIcon img{
-    width: 2rem;
-    margin-right: 2%;
+.SocialMediaIcon img {
+  width: 2rem;
+  margin-right: 2%;
+}
+
+#btnCreditImg:hover {
+  color: var(--fontColorQueen);
+}
+
+#ulCreditoImg {
+  position: absolute;
+  inset: auto auto 0px 0px;
+  margin: 0px;
+  transform: translate(-4px, -20px);
+}
+#ulCreditoImg a {
+  font-size: 1rem !important;
+}
+.global_footer,
+.infor_apps,
+.sagurança_pagamento,
+.copyrightETC,
+.social_myConta {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.global_footer{
+    padding: 1.5rem 0 0 0;
+    border-top: 1px solid #a8a8a9;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyrightETC,
+.copyrightETC p,
+.copyrightETC button,
+ a{
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: .5rem;
+    font-weight: 600;
+    color: #6F6B6B;
 }
 
 
-#btnCreditImg:hover{
-    color: var(--fontColorQueen);
+@media (max-width: 575.98px) {
+  .containerInfor {
+    flex-direction: column;
+  }
+  .Card-footer {
+    width: 100%;
+    padding-left: 3%;
+    margin-bottom: 5%;
+  }
+  .footerTitle {
+    font-size: 1.5rem;
+    
+  }
 
-}
-
-#ulCreditoImg{
-    position: absolute;
-    inset: auto auto 0px 0px;
-    margin: 0px;
-    transform: translate(-4px, -20px);
-}
-#ulCreditoImg a{
+  .copyrightETC p,a{
+    
     font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+ 
+  }
+}
+.copyrightETC{
+    border-top: 1px solid #6F6B6B;
+}
 
+@media (min-width: 575.98px) and (max-width: 900px) {
 }

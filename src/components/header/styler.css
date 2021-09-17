@@ -8,11 +8,9 @@
   align-items: center;
 }
 
-.menuMobile {
+.containerMenuMobile {
   display: none;
-  color: var(--fontColorQueen);
-  width: 3.75rem;
-  height: 3.75rem;
+ 
 }
 .containerSearch {
   width: 17.313rem;
@@ -25,7 +23,7 @@
 .linkMap {
   margin: 0 0.5rem 0 0;
   text-align: center;
-  color: var(--FontColorWrite);
+  color: var(--fontColorQueen);
   background-color: transparent;
   font-weight: 700;
   font-size: 14px;
@@ -41,8 +39,9 @@
   display: block;
 }
 .containerSearch img {
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 1.879rem;
+  height: 1.879rem;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.5));
 }
 
 .formSearch {
@@ -57,6 +56,15 @@ button {
 }
 .formSearch input {
   width: 90%;
+  font-size: 1rem;
+  border-bottom: 2px solid #0cb567;
+
+  transition: all 0.4s linear;
+}
+.formSearch input:focus {
+  border-radius: 2px 25px 25px 2px;
+  box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 12%);
+  outline: none;
   border-bottom: 2px solid #0cb567;
 }
 .formSearch button {
@@ -149,18 +157,25 @@ button {
 
 @media (max-width: 575.98px) {
   .containerSearch {
-    width: 2.1rem;
+     display: none !important;
   }
   .formSearch {
     display: none !important;
   }
-
+  .containerMenuMobile{
+    display: flex;
+    height: 3.75rem;
+    width: 4rem;
+    min-width: 4;
+    align-items: center;
+    justify-content: flex-start;
+  }
   .menuMobile {
     color: var(--fontColorQueen);
-    width: 3.75rem;
-    height: 3.75rem;
+    margin-top: 0;
     align-items: center;
     display: flex !important;
+    font-size: 1.7rem;
   }
   .Userperfil {
     display: none !important;
@@ -170,14 +185,57 @@ button {
     min-width: 8rem;
     margin: 0 9% !important;
   }
+   .px-4 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
   .ContainerUserAndCart {
-    width: 3.438rem;
-    min-width: 3.438rem;
+    width: 4rem;
+    min-width: 4rem;
   }
   .containerSearch {
     min-width: 2.1rem !important ;
   }
   .cart-button {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 575.98px) and (max-width: 900px) {
+  .containerSearch {
+    display: none !important;
+  }
+
+  .containerMenuMobile {
+    display: flex;
+    height: 3.75rem;
+    width: 8rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .menuMobile {
+    color: var(--fontColorQueen);
+    align-items: center;
+    display: flex !important;
+    font-size: 1.8rem;
+  }
+  .Userperfil {
+    display: none !important;
+  }
+  .logoContainer {
+    width: 8rem !important;
+    min-width: 8rem;
+  }
+  .px-4 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+  .ContainerUserAndCart {
+    width: 8rem;
+    min-width: 3.438rem;
+  }
+
+  .cart-button {
+    margin: 0;
   }
 }

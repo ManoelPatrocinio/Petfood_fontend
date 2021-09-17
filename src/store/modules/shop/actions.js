@@ -9,6 +9,9 @@ export function requestPetshops() {
 export function setPetshops(petshops) {
   return { type: types.SET_PETSHOPS, petshops };
 }
+export function setProdutos(products) {
+  return { type: types.SET_PRODUTOS, products };
+}
 export function setShopMapSelected(petshop) {
   return { type: types.SET_PETSHOP_MAP_SELECTED, petshop };
 }
@@ -39,4 +42,9 @@ export function makeRegister(userData) {
 export function makeLogin(user) {
   return { type: types.MAKE_LOGIN,user };
 }
+
+export function makeSearch(string) {
+  return { type: types.MAKE_SEARCH, string };
+}
+
 

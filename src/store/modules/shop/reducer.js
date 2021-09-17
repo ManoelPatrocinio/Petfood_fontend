@@ -8,11 +8,13 @@ import types from "./types";
 const INITTIAL_STATE = {
   petshops: [],
   petshop: {},
+  products:[],
   petshopMapSelected: null,
   mapCenter: {
     lat: -23.561684,
     lng: -46.625378,
   },
+  Datasearch: "",
   cart: [],
   transactionFee: 0.1, //taxa de transação para o marketPlace
   defaultRecipient: {
@@ -38,22 +40,21 @@ const INITTIAL_STATE = {
         street_number: "9999",
         zipcode: "06714360",
       },
-    }
+    },
   },
-  userData:{
+  userData: {
     name: "",
-    email:"",
-    phone:"",
-    cpf:"",
+    email: "",
+    phone: "",
+    cpf: "",
   },
-  user:{
-    email:"",
-    cpf:"",
+  user: {
+    email: "",
+    cpf: "",
   },
   shipping: {},
   items: [],
   split_rules: [],
-  
 };
 
 
@@ -108,6 +109,11 @@ function shop(state = INITTIAL_STATE, action) {
         draft.petshop = action.petshop;
       });
     }
+    case types.SET_PRODUTOS: {
+      return produce(state, (draft) => {
+        draft.products = action.products;
+      });
+    }
     case types.TOGGLE_CART_PRODUCT: {
       return produce(state, (draft) => {
         const index = draft.cart.findIndex((p) => p._id === action.product._id); //verifica de o item já existe
@@ -121,7 +127,13 @@ function shop(state = INITTIAL_STATE, action) {
 
     case types.SET_TRANSACTION: {
       return produce(state, (draft) => {
-        draft.transaction = {...draft.transaction, ...action.transaction};
+        draft.transaction = { ...draft.transaction, ...action.transaction };
+      });
+    }
+
+    case types.MAKE_SEARCH: {
+      return produce(state, (draft) => {
+        draft.Datasearch = action.string;
       });
     }
 

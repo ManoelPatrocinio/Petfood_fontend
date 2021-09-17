@@ -3,13 +3,15 @@ import "./styler.css";
 import Header from "../../components/header";
 import ProductInList from "../../components/products/list";
 import _ from "underscore";
-import { setTransaction as setStoreTransaction,makePurchase} from "../../store/modules/shop/actions";
+import {
+  setTransaction as setStoreTransaction,
+  makePurchase,
+} from "../../store/modules/shop/actions";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import dayjs from "dayjs";
 
 const Checkout = () => {
-
   const dispatch = useDispatch();
   const { cart, transactionFee, defaultRecipient } = useSelector(
     (state) => state.shop
@@ -57,10 +59,10 @@ const Checkout = () => {
   };
   // falta implementar validação, cep nº da cartão etc;
   const makePuchase = () => {
-   dispatch(setStoreTransaction(transaction));
-   setTimeout(()=>{
-    dispatch(makePurchase());
-   },100)
+    dispatch(setStoreTransaction(transaction));
+    setTimeout(() => {
+      dispatch(makePurchase());
+    }, 100);
   };
 
   const getSplitRules = () => {
@@ -71,35 +73,35 @@ const Checkout = () => {
 
     let result = [];
     // recolher o total de cada petshop sob a compra
-       Object.keys(productsByPetshop).map((petshop) => {
-         const products = productsByPetshop[petshop];
-         const totalValuePerPetshop = products
-           .reduce((total, product) => {
-             return total + product.preco;
-           }, 0)
-           .toFixed(2);
+    Object.keys(productsByPetshop).map((petshop) => {
+      const products = productsByPetshop[petshop];
+      const totalValuePerPetshop = products
+        .reduce((total, product) => {
+          return total + product.preco;
+        }, 0)
+        .toFixed(2);
 
-         const totalFee = (totalValuePerPetshop * transactionFee).toFixed(2); //calcula os 10% sobre a compra
+      const totalFee = (totalValuePerPetshop * transactionFee).toFixed(2); //calcula os 10% sobre a compra
 
-         result.push({
-           recipient_id: products[0].petshop_id.recipient_id,
-           percentage: Math.floor(
-             ((totalValuePerPetshop - totalFee) / total) * 100
-           ),
-           liable: true,
-           charge_processing_fee: true,
-         });
-       });
+      result.push({
+        recipient_id: products[0].petshop_id.recipient_id,
+        percentage: Math.floor(
+          ((totalValuePerPetshop - totalFee) / total) * 100
+        ),
+        liable: true,
+        charge_processing_fee: true,
+      });
+    });
 
-       const totalPetshopsPercentage = result.reduce((total, recipient) => {
-         return total + parseFloat(recipient.percentage);
-       }, 0);
+    const totalPetshopsPercentage = result.reduce((total, recipient) => {
+      return total + parseFloat(recipient.percentage);
+    }, 0);
 
-       //adiciona a porcentagem do marketPlace
-       result.push({
-         ...defaultRecipient,
-         percentage: 100 - totalPetshopsPercentage,
-       });
+    //adiciona a porcentagem do marketPlace
+    result.push({
+      ...defaultRecipient,
+      percentage: 100 - totalPetshopsPercentage,
+    });
 
     return result;
   };
@@ -120,7 +122,7 @@ const Checkout = () => {
       })),
       split_rules: getSplitRules(),
     });
-  }, [total]); 
+  }, [total]);
 
   return (
     <div className="h-100">

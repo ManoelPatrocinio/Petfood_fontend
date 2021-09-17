@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 import IllustrationCadastro from "../../assets/womenAndDog.png";
 import Header from "../../components/header";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Cadastro = () => {

@@ -10,9 +10,10 @@ import Map from "../../components/map";
 const Home = () => {
   const dispatch = useDispatch();
   const {petshops} = useSelector((state)=> state.shop)
-  useEffect(()=>{
+  console.log("lista de pet home", petshops)
+  useEffect(() => {
     dispatch(requestPetshops());
-  },[])
+  }, [dispatch]);
   return (
     
     <div className="h-100">

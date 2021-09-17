@@ -2,7 +2,7 @@ import { takeLatest, all, call, put, select } from "redux-saga/effects"; // vinc
 import types from "./types";
 import api from "../../../services/api";
 import { login } from "../../../services/auth";
-import { setPetshops, setPetshop} from "./actions";
+import { setPetshops, setPetshop, setProdutos } from "./actions";
 import Swal from "sweetalert2";
 
 export function* requestPetshops() {
@@ -36,7 +36,7 @@ export function* makePurchase() {
       icon: "error",
       title: "Oopsss",
       text: res.data.refuse.reason,
-    });
+    }); 
     return false;
   }
 
@@ -87,6 +87,32 @@ export function* makeLogin() {
   
 }
 
+export function* makeSearch() {
+  const { Datasearch } = yield select((state) => state.shop);
+  const response = yield call(api.post, "/search", Datasearch);
+  const res = response.data;
+
+  if (res.error) {
+    Swal.fire({
+      icon: "error",
+      title: "Oopsss",
+      text: res.message,
+      //  "Informação inválida ",
+      // text: res.message,
+    });
+    return false;
+  } else {
+     if(res.petshop)  {
+        yield put(setPetshop(res.petshop));
+     }else if(res.products){
+        yield put(setProdutos(res.products));
+     }else{
+       console.log("Sem resultados para sua busca");
+     }
+     return true
+  }
+}
+
 
 //takeLatest: pega a ultima ação disparada
 export default all([
@@ -95,4 +121,5 @@ export default all([
   takeLatest(types.MAKE_PURCHASE, makePurchase),
   takeLatest(types.MAKE_REGISTER, makeRegister),
   takeLatest(types.MAKE_LOGIN, makeLogin),
+  takeLatest(types.MAKE_SEARCH, makeSearch),
 ]);

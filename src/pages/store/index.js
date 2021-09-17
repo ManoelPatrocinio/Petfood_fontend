@@ -27,9 +27,9 @@ const Store = () => {
   // retorna a lista das petshops
   const dispatch = useDispatch();
   const {petshops} = useSelector((state)=> state.shop)
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(requestPetshops());
-  },[])
+  }, [dispatch]);
   // ******* fim ***********
 
 
