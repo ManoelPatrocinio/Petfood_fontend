@@ -63,7 +63,8 @@ if ('geolocation' in navigator) {
   navigator.geolocation.getCurrentPosition(function(position){
     INITTIAL_STATE.mapCenter.lat = position.coords.latitude
     INITTIAL_STATE.mapCenter.lng = position.coords.longitude
-      console.log("latitude do man",INITTIAL_STATE.mapCenter)
+    // window.location.reload()
+    console.log("latitude do man",INITTIAL_STATE.mapCenter)
   },function(error){
       console.log(error)
   })

@@ -1,6 +1,7 @@
 import "./styler.css";
 import { useDispatch,useSelector } from "react-redux";
 import { toggleCartProduct } from "../../../store/modules/shop/actions";
+import StarAvaliation from "../../star_avaliation";
 
 
 const ProductInCard = ({ product }) => {
@@ -9,7 +10,7 @@ const ProductInCard = ({ product }) => {
   const added = cart.findIndex((p) => p._id === product._id) !== -1; //verifica se item já existe
 
   return (
-    <div className="product col-3">
+    <div className="product col-3 d-flex">
       <div className="imgCard">
         <img
           src={product.capa}
@@ -22,8 +23,11 @@ const ProductInCard = ({ product }) => {
           <label className="badge badge-primary">
             R$ {product.preco.toFixed(2)}
           </label>
+          <span className="spanModoPargamentp">À vista</span>
         </h4>
-
+        <div className="wrapper-avaliation">
+          <StarAvaliation/>
+        </div>
         <small>
           <b>{product.nome}</b>
         </small>

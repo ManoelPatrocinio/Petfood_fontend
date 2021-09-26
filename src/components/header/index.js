@@ -65,39 +65,39 @@ const Header = ({ whiteVersion, hideSideBar }) => {
   };
 
   const renderUserLoged = (
-     <div className="userLogado d-flex ">
-       <button
-         className="d-flex"
-         type="button"
-         id="dropdownMenuButtonPerfil"
-         data-bs-toggle="dropdown"
-         aria-expanded="false"
-       >
-         <i className="fas fa-user"></i>
-         <span>
-           <span>{UserNameLoged}</span>
-         </span>
-       </button>
+    <div className="userLogado d-flex ">
+      <button
+        className="d-flex"
+        type="button"
+        id="dropdownMenuButtonPerfil"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i className="fas fa-user"></i>
+        <span>
+          <span>{UserNameLoged.split(" ", 1)}</span>
+        </span>
+      </button>
 
-       <ul
-         className="dropdown-menu"
-         id="menuHeader"
-         aria-labelledby="dropdownMenuButtonPerfil"
-       >
-         <li>
-           <Link to="#" className="dropdown-item">
-             {" "}
-             Menu Perfil
-           </Link>{" "}
-         </li>
-         <li className="dropdown-item">
-           <Link onClick={() => CheckLogout()} to="" className="dropdown-item">
-             Sair
-           </Link>
-         </li>
-       </ul>
-     </div>
-  )
+      <ul
+        className="dropdown-menu"
+        id="menuHeader"
+      aria-labelledby="dropdownMenuButtonPerfil"
+      >
+        <li>
+          <Link to="#" className="dropdown-item">
+            {" "}
+            Menu Perfil
+          </Link>{" "}
+        </li>
+        <li className="dropdown-item">
+          <Link onClick={() => CheckLogout()} to="" className="dropdown-item">
+            Sair
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
   const renderUserNotLoged =  (
     <div className="Notuser">
       <button
