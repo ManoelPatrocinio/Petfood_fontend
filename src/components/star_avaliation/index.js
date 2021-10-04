@@ -3,7 +3,7 @@ import "./styler.css";
 const StarAvaliation = (avalation) => {
   return (
     <div className="estrelas">
-      <input type="radio" id="cm_star-empty" name="fb" value="2" checked />
+      <input type="radio" id="cm_star-empty" name="fb" value="" checked />
       <label for="cm_star-1">
         <i className="fa"></i>
       </label>

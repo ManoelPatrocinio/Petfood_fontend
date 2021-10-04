@@ -1,17 +1,20 @@
 .containerPetInfo {
   margin-top: 3%;
 }
+
 .petshopDestaque {
   cursor: pointer;
   background-color: #f6f5f5;
   height: 19rem;
   max-height: 20rem;
 }
+
 .containerImg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .petshop-infos {
   vertical-align: middle;
   color: #626264;
@@ -20,6 +23,7 @@
 .petshop-infos span.mdi-star {
   color: #facd5d;
 }
+
 .petshop-infos text {
   font-size: 13px;
   margin-right: 10px;
@@ -50,9 +54,11 @@
     height: 50vh;
     max-height: 100%;
   }
+
   .containerImg {
     height: 70%;
   }
+
   .petshop-infos {
     height: 30%;
   }
@@ -62,17 +68,18 @@
     height: 100%;
     margin: 10% 0;
   }
+
   .product {
-    margin: 1rem auto;
-    height: 23rem;
-    max-height: 24rem;
-    width: 83%;
+    margin: 1rem auto !important;
+    max-height: 23rem !important;
+    width: 80% !important;
   }
+
   .product button {
     font-size: 1rem;
     padding: 1px 11px;
     border: none;
-    height: 100%;
+    /* height: 100%; */
     width: 100% !important;
     max-width: 100% !important;
   }

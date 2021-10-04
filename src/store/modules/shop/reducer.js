@@ -8,7 +8,7 @@ import types from "./types";
 const INITTIAL_STATE = {
   petshops: [],
   petshop: {},
-  products:[],
+  products: [],
   petshopMapSelected: null,
   mapCenter: {
     lat: -23.561684,
@@ -58,19 +58,19 @@ const INITTIAL_STATE = {
 };
 
 
-// resgatando a posição do do usuario
-if ('geolocation' in navigator) {
-  navigator.geolocation.getCurrentPosition(function(position){
-    INITTIAL_STATE.mapCenter.lat = position.coords.latitude
-    INITTIAL_STATE.mapCenter.lng = position.coords.longitude
-    // window.location.reload()
-    console.log("latitude do man",INITTIAL_STATE.mapCenter)
-  },function(error){
-      console.log(error)
-  })
-} else {
-  alert("Desculpe, o serviço de geolocalização não é susportado nesse navegador")
-}
+// // resgatando a posição do do usuario
+// if ('geolocation' in navigator) {
+//   navigator.geolocation.getCurrentPosition(function(position){
+//     INITTIAL_STATE.mapCenter.lat = position.coords.latitude
+//     INITTIAL_STATE.mapCenter.lng = position.coords.longitude
+//     // window.location.reload()
+//     console.log("latitude do man",INITTIAL_STATE.mapCenter)
+//   },function(error){
+//       console.log(error)
+//   })
+// } else {
+//   alert("Desculpe, o serviço de geolocalização não é susportado nesse navegador")
+// }
 
 function shop(state = INITTIAL_STATE, action) {
   switch (action.type) {
@@ -128,7 +128,10 @@ function shop(state = INITTIAL_STATE, action) {
 
     case types.SET_TRANSACTION: {
       return produce(state, (draft) => {
-        draft.transaction = { ...draft.transaction, ...action.transaction };
+        draft.transaction = {
+          ...draft.transaction,
+          ...action.transaction
+        };
       });
     }
 

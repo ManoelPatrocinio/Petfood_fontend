@@ -1,8 +1,7 @@
 import "./styler.css";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleCartProduct } from "../../../store/modules/shop/actions";
 import StarAvaliation from "../../star_avaliation";
-
 
 const ProductInCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -19,30 +18,34 @@ const ProductInCard = ({ product }) => {
         />
       </div>
       <div className="prod_info">
-        <h4>
-          <label className="badge badge-primary">
-            R$ {product.preco.toFixed(2)}
-          </label>
-          <span className="spanModoPargamentp">À vista</span>
-        </h4>
-        <div className="wrapper-avaliation">
-          <StarAvaliation/>
+        <div className="d-flex justify-content-between">
+          <p className="badge badge-primary">R$ {product.preco.toFixed(2)}</p>
+          <div className="wrapper-avaliation">
+            <span className="mdi mdi-star"></span>
+            <p>
+              <b>{product.avaliacoes}</b>
+            </p>
+            <small>(140)</small>
+          </div>
         </div>
         <small>
-          <b>{product.nome}</b>
+          <b> {product.nome} </b>
         </small>
       </div>
-
       <div className="btnFooter">
         <button
           onClick={() => dispatch(toggleCartProduct(product))}
           className={`btn btn-${added ? "secondary" : "primary"} `}
         >
-          {added ? "Remover" : <span className="mdi mdi-cart">Adicionar</span>}
+          {added ? (
+            "Remover"
+          ) : (
+            <span className="mdi mdi-cart"> Adicionar </span>
+          )}
         </button>
       </div>
     </div>
   );
-};;
+};
 
 export default ProductInCard;
