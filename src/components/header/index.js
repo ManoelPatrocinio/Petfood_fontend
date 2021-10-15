@@ -16,20 +16,15 @@ const Header = ({ whiteVersion, hideSideBar }) => {
   const history = useHistory(); // p/ redirecionar
   const { cart } = useSelector((state) => state.shop);
   // logica do form de  busca
-  const {
-
-    handleSubmit,
-  } = useForm({
+  const { handleSubmit } = useForm({
     criteriaMode: "all",
   });
 
   const [Datasearch, makeSearch] = useState();
 
-
   const onSubmit = () => {
     dispatch(searchAction(Datasearch));
-    history.push("/search")
-
+    history.push("/search");
   };
 
   /* ***********FIM ********/
@@ -82,7 +77,7 @@ const Header = ({ whiteVersion, hideSideBar }) => {
       <ul
         className="dropdown-menu"
         id="menuHeader"
-      aria-labelledby="dropdownMenuButtonPerfil"
+        aria-labelledby="dropdownMenuButtonPerfil"
       >
         <li>
           <Link to="#" className="dropdown-item">
@@ -98,7 +93,7 @@ const Header = ({ whiteVersion, hideSideBar }) => {
       </ul>
     </div>
   );
-  const renderUserNotLoged =  (
+  const renderUserNotLoged = (
     <div className="Notuser">
       <button
         className="d-flex"
@@ -131,7 +126,7 @@ const Header = ({ whiteVersion, hideSideBar }) => {
         </li>
       </ul>
     </div>
-  )
+  );
 
   return (
     <div className="col-12 d-flex header-global">

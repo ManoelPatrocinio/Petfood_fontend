@@ -1,24 +1,23 @@
-.section-title{
-    font-weight: 600;
-    padding-bottom: 5px;
-    margin-bottom: 2%;
-    display: inline-block;
-    border-bottom: 2px solid var(--FontColorWrite);
+.section-title {
+  font-weight: 600;
+  padding-bottom: 5px;
+  margin-bottom: 2%;
+  display: inline-block;
+  border-bottom: 2px solid var(--FontColorWrite);
 }
 
-.h3Price{
-    font-size: 1.5rem;
-    font-weight: 600;
+.h3Price {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
-.boxsidebar{
-    max-height: 53%;
-    
+.boxsidebar {
+  /* max-height: 83%; */
+  height: 70vh;
 }
-.boxsidebarItem{
-    height: 100%;
-    overflow-y: auto;
+.boxsidebarItem {
+  height: 100%;
+  overflow-y: auto;
 }
-
 
 /*
 *
@@ -26,24 +25,22 @@
 *
 */
 
-@media(max-width: 600px){
-   
-  #socolaCheckout{
-      display: none;
+@media (max-width: 600px) {
+  #socolaCheckout {
+    display: none;
   }
-  .checkoutForm{
-      width: 100%;
+  .checkoutForm {
+    width: 100%;
   }
 
-   #MyAccountMobile {
+  #MyAccountMobile {
     transform: translate(7px, 72px) !important;
     min-width: 16rem;
   }
-  #MyAccountMobile li{
-      text-align: center;
+  #MyAccountMobile li {
+    text-align: center;
   }
 }
-
 
 /*
 *
@@ -51,8 +48,5 @@
 *
 */
 
-  
-@media (min-width:600px) and (max-width:961px) {
-   
-  
+@media (min-width: 600px) and (max-width: 961px) {
 }

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import ProductInList from "../products/list";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { isAuthenticated } from "../../services/auth";
 
 const Sidebar = () => {
   let dockSize = 0.35;
@@ -54,7 +55,11 @@ const Sidebar = () => {
             <h3 className="d-inline-block">R$ {total.toFixed(2)}</h3>
           </div>
           <button
-            onClick={() => history.push("/cadastro")}
+            onClick={() => {
+              isAuthenticated
+                ? history.push("/checkout")
+                : history.push("/cadastro");
+            }}
             className="btn btn-lg btn-primary rounded-0 "
           >
             Finalizar Compra
