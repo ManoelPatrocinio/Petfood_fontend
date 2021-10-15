@@ -1,124 +1,115 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-*,a{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+*,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
-:root{
-    --fontColorQueen:#06d6a0;
-    --fontColorGray:#5c5b5b;
-    --Queen: #06d6a0;
-    --fontColorOrange:#FA643D;
-    --Orange:#FA643D;
-    --background_dark: #212127;
-    --background_dark_secondary:#26262d;
-    --background_light: #ffffff;
-    --FontColorWrite: #fff;
+:root {
+  --fontColorQueen: #06d6a0;
+  --fontColorGray: #5c5b5b;
+  --Queen: #06d6a0;
+  --fontColorOrange: #fa643d;
+  --Orange: #fa643d;
+  --background_dark: #212127;
+  --background_dark_secondary: #26262d;
+  --background_light: #ffffff;
+  --FontColorWrite: #fff;
 }
 html,
-body{
-    height: 100%;
-    overflow-x: hidden;
-    font-family: 'Open Sans';
-    letter-spacing: 0;
-    font-size: 1rem;
-    scroll-behavior: smooth;
-    background-color: var(--background_light);
-
+body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Open Sans";
+  letter-spacing: 0;
+  font-size: 1rem;
+  scroll-behavior: smooth;
+  background-color: var(--background_light);
 }
-@media (min-width: 768px) and (max-width: 1400px){
+@media (min-width: 768px) and (max-width: 1400px) {
+  body::-webkit-scrollbar {
+    width: 0.7rem;
+  }
 
-    body::-webkit-scrollbar {
-        width: .7rem
-    } 
-    
-    body::-webkit-scrollbar-thumb {   
-    background-color: darkgrey; 
-        border-radius: 24px;
-    }
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 24px;
+  }
 }
 
-
-.btn-secondary{
-    background-color: var(--Orange) !important;
+.btn-secondary {
+  background-color: var(--Orange) !important;
 }
 
 .btn-primary,
-.bg-primary
-{
-    background-color:  var(--Queen) !important;
+.bg-primary {
+  background-color: var(--Queen) !important;
 }
 
-
-
-input[type='text'],
-input[type='email'],
-input[type='password'],
-input[type='date'],
-input[type='number'],
-input[type='text']:disabled,
-input[type='email']:disabled,
-input[type='password']:disabled,
-input[type='date']:disabled{
-    font-size: 15px;
-    background: #f6f5f5;
-    border: 0.5px solid #dcdcdc;
-    outline: none;
-    color: #626264;
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="text"]:disabled,
+input[type="email"]:disabled,
+input[type="password"]:disabled,
+input[type="date"]:disabled {
+  font-size: 15px;
+  background: #f6f5f5;
+  border: 0.5px solid #dcdcdc;
+  outline: none;
+  color: #626264;
 }
 
-.btn{
-    font-size: 15px;
+.btn {
+  font-size: 15px;
 }
-.btn-secondary.rounded-circle{
-    padding: 6px 14px;
+.btn-secondary.rounded-circle {
+  padding: 6px 14px;
 }
-
 
 .btn-secondary,
 .btn-secondary:focus,
 .btn-secondary:active,
 .btn-secondary:disabled,
-.btn-secondary:hover{
-    background-color: var(--Orange) !important;
-    border-color: var(--Orange);
+.btn-secondary:hover {
+  background-color: var(--Orange) !important;
+  border-color: var(--Orange);
 }
 
-.badge{
-    font-weight: 500;
-     letter-spacing: 0;
+.badge {
+  font-weight: 500;
+  letter-spacing: 0;
 }
-.badge.badge-primary{
-    margin-bottom: 0;
-    background-color: #dddada5c;
-    color: #12b342 ;
-}
-
-.badge.badge-secondary{
-    background: var(--Orange);
+.badge.badge-primary {
+  margin-bottom: 0;
+  background-color: #dddada5c;
+  color: #12b342;
 }
 
+.badge.badge-secondary {
+  background: var(--Orange);
+}
 
-.box{
-    background: #fff;
-    box-shadow:  0px 0px 11px 6px rgba(0, 0, 0, 0.08);
-    border-radius: 5px;
-    display: inline-block;
-    padding: 28px;
-   
+.box {
+  background: #fff;
+  box-shadow: 0px 0px 11px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+  display: inline-block;
+  padding: 28px;
 }
 .alertCadInput {
-    font-size: 0.9rem;
-    /* font-weight: 600; */
-    color: #de4617;
-    margin-left: 2%;
+  font-size: 0.9rem;
+  /* font-weight: 600; */
+  color: #de4617;
+  margin-left: 2%;
 }
 
 /* estilo de elementos das pags de cadastro e login */
@@ -128,7 +119,7 @@ input[type='date']:disabled{
   position: relative;
   flex-direction: column;
   align-items: center;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
 }
 
 .box_form_cantainer {
@@ -140,7 +131,7 @@ input[type='date']:disabled{
 }
 
 .cardDestaque {
-  background-color:#ffffff;
+  background-color: #ffffff;
   border-radius: 1.2rem 0 0 1.2rem;
 }
 
@@ -157,13 +148,12 @@ input[type='date']:disabled{
 
 .cardDestaque_boxSlogan {
   height: 20%;
-   color: #6c757d;
+  color: #6c757d;
 }
 
 .cardDestaque_boxSlogan p {
   font-size: 1.5rem;
   font-weight: 600;
- 
 }
 
 .box-form {
@@ -194,9 +184,7 @@ input[type='date']:disabled{
   color: rgb(236, 15, 15);
 }
 
-
 /* medias query */
-
 
 @media (max-width: 600px) {
   .container_section {
@@ -223,7 +211,6 @@ input[type='date']:disabled{
     height: auto;
   }
 
- 
   .cardDestaque_boxImg img {
     width: 71% !important;
     height: 100%;
@@ -237,6 +224,9 @@ input[type='date']:disabled{
     width: 93%;
     padding: 1rem;
     margin: 0 auto;
+  }
+  .linkPcadastro {
+    font-size: 0.7rem !important;
   }
 }
 

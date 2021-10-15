@@ -9,7 +9,7 @@
   width: 100%;
   padding-left: 0 !important;
 }
-.card-segurança{
+.card-segurança {
   display: contents;
 }
 .Card-footer {
@@ -52,30 +52,28 @@
 .sagurança_pagamento,
 .copyrightETC,
 .social_myConta {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.global_footer{
-    padding: 1.5rem 0 0 0;
-    border-top: 1px solid #a8a8a9;
-    justify-content: center;
-    align-items: center;
+.global_footer {
+  padding: 1.5rem 0 0 0;
+  border-top: 1px solid #a8a8a9;
+  justify-content: center;
+  align-items: center;
 }
 
 .copyrightETC,
 .copyrightETC p,
 .copyrightETC button,
- a{
-    text-align: center;
-    font-size: 12px;
-    margin-bottom: .5rem;
-    font-weight: 600;
-    color: #6F6B6B;
+.global_footer a {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #6f6b6b;
 }
-
 
 @media (max-width: 575.98px) {
   .containerInfor {
@@ -87,19 +85,17 @@
     margin-bottom: 5%;
   }
   .footerTitle {
-    font-size: 1.5rem;
-    
+    font-size: 1.2rem;
   }
 
-  .copyrightETC p,a{
-    
-    font-size: 1rem !important;
+  .copyrightETC p,
+  .global_footer a {
+    font-size: 0.8rem !important;
     margin-bottom: 1rem !important;
- 
   }
 }
-.copyrightETC{
-    border-top: 1px solid #6F6B6B;
+.copyrightETC {
+  border-top: 1px solid #6f6b6b;
 }
 
 @media (min-width: 575.98px) and (max-width: 900px) {

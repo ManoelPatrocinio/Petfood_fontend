@@ -70,6 +70,7 @@
   }
 
   .product {
+    min-width: 40%;
     margin: 1rem auto !important;
     max-height: 23rem !important;
     width: 80% !important;
@@ -82,5 +83,21 @@
     /* height: 100%; */
     width: 100% !important;
     max-width: 100% !important;
+  }
+}
+
+@media (min-width: 575.98px) AND (max-width: 900px) {
+  .container,
+  .container-sm {
+    max-width: 600px;
+  }
+  .product {
+    min-width: 40%;
+  }
+  .petshopDestaque {
+    width: 22% !important;
+  }
+  .containerProdutos {
+    width: 75%;
   }
 }

@@ -1,14 +1,13 @@
 import "./styler.css";
 import Dock from "react-dock";
 import { useState, useEffect } from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { isAuthenticated, logout } from "../../services/auth";
 import Swal from "sweetalert2";
 
 const MenuSidebar = () => {
-
   const widthSize = {
-    size: 0.75
+    size: 0.75,
   };
   let UserNameLoged = "";
   if (isAuthenticated()) {
@@ -27,13 +26,12 @@ const MenuSidebar = () => {
       }
     });
   };
-  
-  const [opened, setOpenedMenu] = useState(false);
-   //   escuta o evento disparado no Header, para exibir o menu
-   useEffect(() => {
-      window.addEventListener("openMenu", () => {
-           setOpenedMenu(true);
 
+  const [opened, setOpenedMenu] = useState(false);
+  //   escuta o evento disparado no Header, para exibir o menu
+  useEffect(() => {
+    window.addEventListener("openMenu", () => {
+      setOpenedMenu(true);
     });
   }, []);
 
@@ -56,7 +54,7 @@ const MenuSidebar = () => {
               <small id="userEmail">emailExemplo@gmail.com</small> */}
             {isAuthenticated() ? (
               <>
-              <div className="userLogadoMobile d-flex ">
+                <div className="userLogadoMobile d-flex ">
                   <button
                     className="d-flex"
                     type="button"
@@ -64,9 +62,7 @@ const MenuSidebar = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    
-                    <small>{UserNameLoged}</small>
-                  
+                    <small>{UserNameLoged.split(" ", 1)}</small>
                   </button>
 
                   <ul
@@ -92,7 +88,6 @@ const MenuSidebar = () => {
                   </ul>
                 </div>
               </>
-             
             ) : (
               <>
                 <button

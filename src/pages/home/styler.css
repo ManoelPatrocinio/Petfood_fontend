@@ -1,20 +1,12 @@
-.petshop-list-container{
-    /* position: absolute; */
-    height: 30%;
-    margin-bottom: 0;
-    top: 91px;
-    z-index: 999;
-    left: 0;
-    right: 0;
-    background:  linear-gradient(
-        180deg,
-        #ffffff 55.47%,
-        rgba(255,255,255,0) 100%
-    );
+.petshop-list-container {
+  position: relative;
+  height: 56%;
+  margin-bottom: 0;
+  background-color: var(--background_light);
 }
-.subTitle h5{
+.subTitle h5 {
   color: #6c757d;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 600;
   padding: 5px;
 }
@@ -26,19 +18,17 @@
   margin-top: 10px;
 }
 .petshop-list::-webkit-scrollbar {
-  width: 10px
-} 
-
-.petshop-list::-webkit-scrollbar-thumb {   
- background-color: darkgrey; 
-  border-radius: 24px;
+  width: 10px;
 }
 
+.petshop-list::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 24px;
+}
 
 /* 
 *
 * layout mobile
 */
-@media(max-width:600px){
-
+@media (max-width: 600px) {
 }

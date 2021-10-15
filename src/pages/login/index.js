@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 import { Link, useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
-import Header from "../../components/header"
+import Header from "../../components/header";
 import Footer from "../../components/footer";
 import "./style.css";
 
@@ -166,9 +166,9 @@ const Login = () => {
                 Não tem uma conta, <span>clique aqui</span> e cadastre-se
               </Link>
               <div id="LineBottomLogin"></div>
-              <Link to="/" id="linkRemenberPassword">
+              {/* <Link to="/" id="linkRemenberPassword">
                 Esqueceu sua senha ?
-              </Link>
+              </Link> */}
             </form>
           </div>
         </div>
