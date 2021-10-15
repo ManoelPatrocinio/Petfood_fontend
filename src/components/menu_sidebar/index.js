@@ -6,9 +6,6 @@ import { isAuthenticated, logout } from "../../services/auth";
 import Swal from "sweetalert2";
 
 const MenuSidebar = () => {
-  const widthSize = {
-    size: 0.75,
-  };
   let UserNameLoged = "";
   if (isAuthenticated()) {
     UserNameLoged = localStorage.getItem("UserName");
@@ -42,7 +39,7 @@ const MenuSidebar = () => {
         setOpenedMenu(visible);
       }}
       position="left"
-      size={widthSize.size}
+      size={0.75}
     >
       <div className="h-100 col-12 d-flex flex-direction-column pt-3 Menusidebar">
         <div className="col-12 row perfilImgAndName ">
