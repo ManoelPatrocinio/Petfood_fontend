@@ -6,12 +6,15 @@ import "./styler.css";
 import Header from "../../components/header";
 import Petshop from "../../components/petshop";
 import Map from "../../components/map";
+import ReactGA from 'react-ga';
 
 const Home = () => {
   const dispatch = useDispatch();
   const { petshops } = useSelector((state) => state.shop);
   console.log("lista de pet home", petshops);
   useEffect(() => {
+    ReactGA.initialize('G-LRBM62LDFM');
+    ReactGA.pageview(window.location.pathname + window.location.search);
     dispatch(requestPetshops());
   }, [dispatch]);
   return (
@@ -19,7 +22,7 @@ const Home = () => {
       <Header></Header>
       <div className="container-fluid petshop-list-container col-12">
         <div className="col-12 px-4 text-center subTitle">
-          <h5>Mais próximos de você(6)</h5>
+          <h5>Mais próximos de você(5)</h5>
         </div>
         <ul className="col-12 petshop-list">
           {petshops.map((p) => (

@@ -1,7 +1,6 @@
 import "./styler.css";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCartProduct } from "../../../store/modules/shop/actions";
-import StarAvaliation from "../../star_avaliation";
 
 const ProductInCard = ({ product }) => {
   const dispatch = useDispatch();
