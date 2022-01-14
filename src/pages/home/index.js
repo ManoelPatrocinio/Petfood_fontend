@@ -6,15 +6,12 @@ import "./styler.css";
 import Header from "../../components/header";
 import Petshop from "../../components/petshop";
 import Map from "../../components/map";
-import ReactGA from 'react-ga';
 
 const Home = () => {
   const dispatch = useDispatch();
   const { petshops } = useSelector((state) => state.shop);
-  console.log("lista de pet home", petshops);
   useEffect(() => {
-    ReactGA.initialize('G-LRBM62LDFM');
-    ReactGA.pageview(window.location.pathname + window.location.search);
+  
     dispatch(requestPetshops());
   }, [dispatch]);
   return (

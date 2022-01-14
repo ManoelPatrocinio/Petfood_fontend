@@ -16,6 +16,7 @@ import Home from "./pages/home";
 import Store from "./pages/store";
 import Search from "./pages/search";
 
+  import useGaTracker from './useGaTracker'
 import { isAuthenticated } from "./services/auth";
 
 // define as rotas que só serão exibidas se o user estiver auth
@@ -37,6 +38,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 );
 
 const Routes = () => {
+  useGaTracker();
   return (
     <>
       <Router>
