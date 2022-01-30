@@ -79,7 +79,6 @@ export function* makeLogin() {
     });
     return false;
   }else{
-    console.log("valor salvo no local:", res.user.name);
     login(res.token); //salva o token no local storage
     localStorage.setItem("UserName", res.user.name); //salva o nome do user no local storage
   }

@@ -9,11 +9,10 @@ import Header from "../../components/header";
 const Petshop = ({ match }) => {
   const dispatch = useDispatch();
   const { petshop } = useSelector((state) => state.shop);  
-
   useEffect(() => {
     dispatch(requestPetshop(match.params.id));
   }, []);  
-
+  
   return (
     <div className="h-100">
       <Header/>
@@ -49,8 +48,8 @@ const Petshop = ({ match }) => {
             <h5>Produtos</h5>
             <br />
             <div className="row">
-              {petshop.products?.map((p) => (
-                <ProductInCard product={p} />
+              {petshop.products?.map((p, index) => (
+                <ProductInCard product={p} key={index} />
               ))}
             </div>
           </div>

@@ -15,7 +15,6 @@ const Sidebar = () => {
   if (windowWidth < 600) {
     dockSize = 0.75;
   }
-  console.log("windowWidth", windowWidth);
   const history = useHistory();
   const { cart } = useSelector((state) => state.shop);
 
@@ -45,8 +44,8 @@ const Sidebar = () => {
       <div className="container-fluid pt-3 sidebar">
         <h5>Minha Sacola ({cart.length})</h5>
         <div className="row products ">
-          {cart.map((p) => (
-            <ProductInList product={p} />
+          {cart.map((p,index) => (
+            <ProductInList product={p} key={index}/>
           ))}
         </div>
         <div className="row align-items-end footer">

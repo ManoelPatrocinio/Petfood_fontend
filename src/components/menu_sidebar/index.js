@@ -127,7 +127,7 @@ const MenuSidebar = () => {
               placeholder="O que seu pet precisa ?"
             />
             <button type="button" className="btn_Search ">
-              <i class="fas fa-search"></i>
+              <i className="fas fa-search"></i>
             </button>
           </form>
           <ul className="categoriasMobile">

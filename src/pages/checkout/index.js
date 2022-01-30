@@ -275,8 +275,8 @@ const Checkout = () => {
             <div className="box col mb-4 boxsidebar">
               <h5>Minha Sacola ({cart.length}) </h5>
               <div className="row products boxsidebarItem">
-                {cart.map((p) => (
-                  <ProductInList product={p} />
+                {cart.map((p,index) => (
+                  <ProductInList product={p} key={index} />
                 ))}
               </div>
             </div>

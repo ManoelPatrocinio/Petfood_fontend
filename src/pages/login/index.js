@@ -104,7 +104,6 @@ const Login = () => {
                   errors={errors}
                   name="client_email"
                   render={({ messages }) => {
-                    console.log("messages", messages);
                     return messages
                       ? Object.entries(messages).map(([type, message]) => (
                           <small className="alertCadInput" key={type}>
@@ -144,7 +143,6 @@ const Login = () => {
                   errors={errors}
                   name="client_cpf"
                   render={({ messages }) => {
-                    console.log("messages", messages);
                     return messages
                       ? Object.entries(messages).map(([type, message]) => (
                           <small className="alertCadInput" key={type}>

@@ -100,7 +100,6 @@ const Cadastro = () => {
                   errors={errors}
                   name="client_name"
                   render={({ messages }) => {
-                    console.log("messages", messages);
                     return messages
                       ? Object.entries(messages).map(([type, message]) => (
                           <small className="alertCadInput" key={type}>
@@ -141,7 +140,6 @@ const Cadastro = () => {
                   errors={errors}
                   name="client_email"
                   render={({ messages }) => {
-                    console.log("messages", messages);
                     return messages
                       ? Object.entries(messages).map(([type, message]) => (
                           <small className="alertCadInput" key={type}>
@@ -182,7 +180,6 @@ const Cadastro = () => {
                   errors={errors}
                   name="client_contato"
                   render={({ messages }) => {
-                    console.log("messages", messages);
                     return messages
                       ? Object.entries(messages).map(([type, message]) => (
                           <small className="alertCadInput" key={type}>
@@ -225,7 +222,6 @@ const Cadastro = () => {
                   errors={errors}
                   name="client_cpf"
                   render={({ messages }) => {
-                    console.log("messages", messages);
                     return messages
                       ? Object.entries(messages).map(([type, message]) => (
                           <small className="alertCadInput" key={type}>
@@ -267,7 +263,6 @@ const Cadastro = () => {
                   errors={errors}
                   name="client_birthday"
                   render={({ messages }) => {
-                    console.log("messages", messages);
                     return messages
                       ? Object.entries(messages).map(([type, message]) => (
                           <small className="alertCadInput" key={type}>

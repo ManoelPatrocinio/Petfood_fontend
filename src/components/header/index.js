@@ -136,7 +136,7 @@ const Header = ({ whiteVersion, hideSideBar }) => {
           onClick={() => openMenuSidebar()}
           className="menuMobile "
         >
-          <i class="fas fa-bars"></i>
+          <i className="fas fa-bars"></i>
         </button>
       </div>
 

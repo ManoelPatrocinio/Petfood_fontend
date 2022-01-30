@@ -15,8 +15,8 @@ const Map = ({ petshops }) => {
         center={mapCenter}
         defaultZoom={17}
       >
-        {petshops.map((p) =>(
-          <Marker petshop={p} lat={p.location.lat} lng={p.location.lng}/>
+        {petshops.map((p,index) =>(
+          <Marker key={index} petshop={p} lat={p.location.lat} lng={p.location.lng}/>
         ))}
       </GoogleMapReact>
     </div>

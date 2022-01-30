@@ -22,8 +22,8 @@ const Home = () => {
           <h5>Mais próximos de você(5)</h5>
         </div>
         <ul className="col-12 petshop-list">
-          {petshops.map((p) => (
-            <Petshop petshop={p} />
+          {petshops.map((p,index) => (
+            <Petshop petshop={p} key={index} />
           ))}
         </ul>
       </div>

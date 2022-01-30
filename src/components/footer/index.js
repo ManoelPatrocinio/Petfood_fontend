@@ -18,19 +18,19 @@ const Footer = () => {
           </button>
           <ul className="footerList collapse" id="collapseInfoAndHelp">
             <li>
-              <Link to="#"> Sobre Nós</Link>
+              <Link to=""> Sobre Nós</Link>
             </li>
             <li>
-              <Link to="#"> Política de Privacidade</Link>
+              <Link to=""> Política de Privacidade</Link>
             </li>
             <li>
-              <Link to="#"> Formas de Pagamento</Link>
+              <Link to=""> Formas de Pagamento</Link>
             </li>
             <li>
-              <Link to="#"> Frete e Entregas</Link>
+              <Link to=""> Frete e Entregas</Link>
             </li>
             <li>
-              <Link to="#"> Trocas e Devoluções</Link>
+              <Link to=""> Trocas e Devoluções</Link>
             </li>
           </ul>
           <div>
@@ -100,13 +100,13 @@ const Footer = () => {
           </button>
           <ul className="footerList collapse" id="collapseMyConta">
             <li>
-              <Link> Meus pedidos</Link>
+              <Link to=""> Meus pedidos</Link>
             </li>
             <li>
-              <Link> Meu cadastro</Link>
+              <Link to=""> Meu cadastro</Link>
             </li>
             <li>
-              <Link> Fale com a ouvidoria</Link>
+              <Link to=""> Fale com a ouvidoria</Link>
             </li>
           </ul>
 
@@ -125,21 +125,21 @@ const Footer = () => {
             className="wrapperSocialMedia col-12  collapse"
             id="collapseSocialNetwork"
           >
-            <Link to="#" className="SocialMediaIcon">
+            <Link to="" className="SocialMediaIcon">
               {" "}
               <img
                 src="https://image.flaticon.com/icons/png/512/733/733558.png"
                 alt="instagram"
               />
             </Link>
-            <Link to="#" className="SocialMediaIcon">
+            <Link to="" className="SocialMediaIcon">
               {" "}
               <img
                 src="https://image.flaticon.com/icons/png/512/145/145807.png"
                 alt="instagram"
               />
             </Link>
-            <Link to="#" className="SocialMediaIcon">
+            <Link to="" className="SocialMediaIcon">
               {" "}
               <img
                 src="https://image.flaticon.com/icons/png/512/145/145802.png"
@@ -150,17 +150,17 @@ const Footer = () => {
         </div>
       </div>
       <div className="copyrightETC col-12 mt-5">
-        <div class="btn-group dropup">
+        <div className="btn-group dropup">
           <button
             type="button"
-            class="dropdown-toggle"
+            className="dropdown-toggle"
             data-bs-toggle="dropdown"
             aria-expanded="false"
             id="btnCreditImg"
           >
             Crédito pelas imagens
           </button>
-          <ul class="dropdown-menu" id="ulCreditoImg">
+          <ul className="dropdown-menu" id="ulCreditoImg">
             <li>
               {" "}
               <a href="https://www.freepik.com" title="Freepik" target="blank">
