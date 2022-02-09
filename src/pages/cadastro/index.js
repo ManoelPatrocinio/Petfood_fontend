@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux"; //dispara a action p/ a reducer atrav
 import { makeRegister as setUserData } from "../../store/modules/shop/actions";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
-import IllustrationCadastro from "../../assets/womenAndDog.png";
+import IllustrationCadastro from "../../assets/womenAndDog.svg";
 import Header from "../../components/header";
 import { useHistory } from "react-router-dom";
 import Swal from "sweetalert2";

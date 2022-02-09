@@ -17,6 +17,7 @@ const ProductInCard = ({ product }) => {
         />
       </div>
       <div className="prod_info">
+        <h1 className="CardP_price">{product.nome}</h1>
         <div className="d-flex justify-content-between">
           <p className="badge badge-primary">R$ {product.preco.toFixed(2)}</p>
           <div className="wrapper-avaliation">
@@ -27,9 +28,6 @@ const ProductInCard = ({ product }) => {
             <small>(140)</small>
           </div>
         </div>
-        <small>
-          <b> {product.nome} </b>
-        </small>
       </div>
       <div className="btnFooter">
         <button

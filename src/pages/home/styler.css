@@ -1,6 +1,12 @@
+.containerHome{
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
 .petshop-list-container {
   position: relative;
-  height: 32%;
+  height: 23%;
   margin-bottom: 0;
   background-color: var(--background_light);
 }
@@ -11,11 +17,9 @@
   padding: 5px;
 }
 .petshop-list {
-  padding: 15px;
   overflow-x: auto;
   white-space: nowrap; /*rolagem horizontal*/
   width: 100%;
-  margin-top: 10px;
 }
 .petshop-list::-webkit-scrollbar {
   width: 10px;

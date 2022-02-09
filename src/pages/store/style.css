@@ -1,148 +1,141 @@
-.containerCategorias{
-    border-top: 2px solid #cecece;
-    background-color: #f9fafb;
+.containerCategorias {
+  border-top: 1px solid #cecece;
 }
-.box_categoria_circle{
-    justify-content: center;
+.box_categoria_circle {
+  justify-content: center;
 }
-.categoria_item{
-    border-radius: 50%;
-    width: 68px;
-    height: 68px;
-    margin: 1rem;
-}
-
-.categoria_item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-.categoryPhrase{
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-
-    font-size: 1.3rem;
-    text-align: center;
-    color: var(--fontColorGray);
-    font-family: 'Roboto Condensed', sans-serif;
-
-}
-.LineSubTitle{
-    width: 15.938rem;
-    height: 2px;
-    background-color: var(--fontColorGray);
-    margin: 0 1%;
+.categoria_item {
+  border-radius: 50%;
+  width: 68px;
+  height: 68px;
+  margin: 1rem;
 }
 
+.categoria_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.categoryPhrase {
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
 
-
-#slideDestaques{
-    height: 16.875rem;
-    max-height:16.875rem ;
+  font-size: 1.3rem;
+  text-align: center;
+  color: var(--fontColorGray);
+  font-family: "Roboto Condensed", sans-serif;
+}
+.LineSubTitle {
+  width: 40%;
+  height: 1px;
+  background-color: var(--Gray);
+  margin: 0 1%;
 }
 
-.carousel-item{
-    background-color: #212529;
+#slideDestaques {
+  height: 16.875rem;
+  max-height: 16.875rem;
 }
 
-.carousel-item img{
-    width: 100%;
-    height: 100%;
-    opacity: .8;
-    object-fit: cover;
+.carousel-item {
+  background-color: #212529;
+}
 
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  object-fit: cover;
 }
-.carousel-control-next, .carousel-control-prev{
-    opacity: 1;
-
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: 1;
 }
-.carousel-control-next-icon, .carousel-control-prev-icon{
-    width: 3rem;
-    height: 3rem;
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 3rem;
+  height: 3rem;
 }
-.carousel-indicators{
-   margin-bottom: 0;   
+.carousel-indicators {
+  margin-bottom: 0;
 }
 .carousel-indicators [data-bs-target] {
-    width: 25px;
-    height: 25px;
-    padding: 0;
-    border-radius: 50%;
-    background-color: #212529;
-}  
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #212529;
+}
 
-
-
-.Section_container{
-    height: auto;
-    background-color: #fff;
-    padding: 1% ;
+.Section_container {
+  height: auto;
+  background-color: #fff;
+  padding: 1%;
 }
 
 .SectionTitleContent {
-    align-items: center;
-    justify-content: center;
-    margin: 0 0 2% 0;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 2% 0;
 
-    font-size: 1.3rem;
-    text-align: center;
+  font-size: 1.3rem;
+  text-align: center;
 }
-.SectionTitleText{
-    max-width: 9rem;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 28px;
-    color: var(--fontColorGray);
-
+.SectionTitleText {
+  max-width: 9rem;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 28px;
+  color: var(--fontColorGray);
 }
 
 /* Styled section Marcas Bem avaliadas */
 
-
-
-.Cards_content{
-  justify-content: space-evenly;  
+.Cards_content {
+  justify-content: space-evenly;
   align-items: center;
   overflow-x: auto;
-  white-space: nowrap;
 }
-.PetshopCardLogo{
-    width: 11rem;
-    height: 7rem;
-    border-radius: 5px;
-    border-top: 1px solid #cecece;
+.PetshopCardLogo {
+  width: 11rem;
+  min-width: 9rem;
+  height: 7rem;
+  border-radius: 5px;
+  border-top: 1px solid #cecece;
 }
-.PetshopCardLogo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
+.PetshopCardLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
 
-}
-
-/* 0000000000000000000000 */
+/* ****************************** */
 
 /* 
 *
 * layout mobile
 */
-@media(max-width:600px){
+@media (max-width: 600px) {
+  .categoria_item {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 4px;
+  }
+  #slideDestaques {
+    height: 24vh;
+    max-height: 24vh;
+  }
+  .carousel-item {
+    height: 100%;
+  }
 
-    .categoria_item {
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        margin: 4px;
-    }
-    #slideDestaques {
-        height: 24vh;
-        max-height: 24vh;
-    }
-    .carousel-item{
-        height: 100%;
-    }
+  .PetshopCardLogo {
+    margin: 2% 3%;
+  }
 }

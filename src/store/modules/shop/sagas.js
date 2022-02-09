@@ -14,9 +14,14 @@ export function* requestPetshops() {
 export function* requestPetshop(payload) {
   const response = yield call(api.get, `/petshop/${payload.id}`);
   const res = response.data;
+  console.log("retorno da api:", response.data)
   yield put(setPetshop(res.petshop));
 }
-
+export function* requestProducts() {
+  const response = yield call(api.get, "/store");
+  const res = response.data;
+  yield put(setProdutos(res.products));
+}
 export function* makePurchase() {
   const { transaction } = yield select((state) => state.shop);
   const response = yield call(api.post, "/checked/purchase", transaction);
@@ -116,6 +121,7 @@ export function* makeSearch() {
 //takeLatest: pega a ultima ação disparada
 export default all([
   takeLatest(types.REQUEST_PETSHOPS, requestPetshops),
+  takeLatest(types.REQUEST_PRODUCTS, requestProducts),
   takeLatest(types.REQUEST_PETSHOP, requestPetshop),
   takeLatest(types.MAKE_PURCHASE, makePurchase),
   takeLatest(types.MAKE_REGISTER, makeRegister),

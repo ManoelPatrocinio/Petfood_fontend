@@ -21,18 +21,22 @@ import catRoedores from "../../assets/catroedor.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
-import { requestPetshops } from "../../store/modules/shop/actions";
+import { requestPetshops, requestProducts } from "../../store/modules/shop/actions";
+import {Link} from 'react-router-dom';
+
 
 const Store = () => {
   // retorna a lista das petshops
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(requestPetshops());
+    dispatch(requestProducts())
   }, [dispatch]);
   const { petshops } = useSelector((state) => state.shop);
   const { products } = useSelector((state) => state.shop);
   
   // ******* fim ***********
+
 
   return (
     <div className="col-12">
@@ -60,9 +64,9 @@ const Store = () => {
           </div>
         </div>
         <div className="categoryPhrase d-flex">
-          <div className="LineSubTitle"></div>
+          <div className="LineSubTitle" style={{width:'20%'}}></div>
           <p> Explore o Melhor</p>
-          <div className="LineSubTitle"></div>
+          <div className="LineSubTitle"  style={{width:'20%'}}></div>
         </div>
       </section>
       {/*start caroulsel slide */}
@@ -135,13 +139,13 @@ const Store = () => {
       <section className="Section_container col-12">
         <header className="SectionTitleContent d-flex col-12">
           <div className="LineSubTitle"></div>
-          <h3 className="SectionTitleText">Produtos Em Destaque</h3>
+          <h3 className="SectionTitleText">Destaques</h3>
           <div className="LineSubTitle"></div>
         </header>
 
         <div className="Cards_content col-12 d-flex">
           {products
-            .filter((p) => p.avaliacoes > 4.6)
+            .filter((p) => p.avaliacoes > 4)
             .map((p, index) => (
                <ProductInCard key={index} product={p} />
 
@@ -154,7 +158,7 @@ const Store = () => {
       <section className="Section_container col-12">
         <header className="SectionTitleContent d-flex col-12">
           <div className="LineSubTitle"></div>
-          <h3 className="SectionTitleText">Marcas Bem Avaliadas</h3>
+          <h3 className="SectionTitleText">Lojas Bem Avaliadas</h3>
           <div className="LineSubTitle"></div>
         </header>
 
@@ -162,9 +166,29 @@ const Store = () => {
           {petshops
             .filter((p) => p.avaliacao > 4)
             .map((p, index) => (
-              <div className="PetshopCardLogo" key={index}>
+              <Link to={`/petshop/${p._id}`} className="PetshopCardLogo" key={index} >
                 <img src={p.logo} alt="logo petshop" />
-              </div>
+              </Link>
+            ))}
+        </div>
+      </section>
+      {/* End Section Marcas Bem avaliadas */}
+
+      
+      {/* main Section Produtos em Destaque */}
+      <section className="Section_container col-12">
+        <header className="SectionTitleContent d-flex col-12">
+          <div className="LineSubTitle"></div>
+          <h3 className="SectionTitleText">Mais Buscados</h3>
+          <div className="LineSubTitle"></div>
+        </header>
+
+        <div className="Cards_content col-12 d-flex">
+          {products
+            .filter((p) => p.avaliacoes == 5)
+            .map((p, index) => (
+               <ProductInCard key={index} product={p} />
+
             ))}
         </div>
       </section>
