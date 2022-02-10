@@ -46,7 +46,7 @@ const Routes = () => {
           <Route path="/" exact component={Home} />
         </Switch>
         <Switch>
-          <Route path="/store" exact component={Store} />
+          <Route path="/store"  exact component={Store} />
         </Switch>
         <Switch>
           <Route path="/petshop/:id" exact component={Petshop} />

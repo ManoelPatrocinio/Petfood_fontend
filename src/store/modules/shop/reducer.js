@@ -58,19 +58,6 @@ const INITTIAL_STATE = {
 };
 
 
-// // resgatando a posição do do usuario
-// if ('geolocation' in navigator) {
-//   navigator.geolocation.getCurrentPosition(function(position){
-//     INITTIAL_STATE.mapCenter.lat = position.coords.latitude
-//     INITTIAL_STATE.mapCenter.lng = position.coords.longitude
-//     // window.location.reload()
-//     console.log("latitude do man",INITTIAL_STATE.mapCenter)
-//   },function(error){
-//       console.log(error)
-//   })
-// } else {
-//   alert("Desculpe, o serviço de geolocalização não é susportado nesse navegador")
-// }
 
 function shop(state = INITTIAL_STATE, action) {
   switch (action.type) {

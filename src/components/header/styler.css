@@ -20,14 +20,7 @@
   align-items: center;
 }
 
-.linkMap {
-  margin: 0 0.5rem 0 0;
-  text-align: center;
-  color: var(--fontColorQueen);
-  background-color: transparent;
-  font-weight: 700;
-  font-size: 14px;
-}
+
 .btnSearch {
   border: none;
   background-color: transparent;

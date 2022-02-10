@@ -141,10 +141,7 @@ const Header = ({ whiteVersion, hideSideBar }) => {
       </div>
 
       <div className="containerSearch d-flex">
-        {/* <button className="d-block linkMap">
-          <i className="fas fa-street-view"> </i>
-          Próximo de ti
-        </button> */}
+
         <form className="formSearch d-flex" onSubmit={handleSubmit(onSubmit)}>
           <button type="submit">
             <img src={SearchIcon} alt="pesquisar" />
@@ -161,7 +158,7 @@ const Header = ({ whiteVersion, hideSideBar }) => {
       </div>
 
       <div className="logoContainer py-3 px-4 text-center">
-        <Link to="/">
+        <Link to="/store">
           <img
             src={whiteVersion ? LogoWhite : Logo}
             className="img-fluid"

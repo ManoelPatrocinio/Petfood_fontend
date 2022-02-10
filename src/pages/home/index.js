@@ -1,16 +1,40 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { requestPetshops } from "../../store/modules/shop/actions";
+import { requestPetshops,setMapCenter } from "../../store/modules/shop/actions";
 
 import "./styler.css";
 import{Header,Petshop,Map} from "../../components"
 
+
+
 const Home = () => {
   const dispatch = useDispatch();
   const { petshops } = useSelector((state) => state.shop);
-  useEffect(() => {
+  const RenderUserPosition = ()=>{
+    // resgatando a posição do do usuario
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition((position)=>{
+        const UserLocation ={
+          'lat' : position.coords.latitude,
+          'lng' :position.coords.longitude
+        }
+        dispatch(setMapCenter(UserLocation));
+      },(error)=>{
+          console.log(error)
+      })
+    } else {
+      alert("Desculpe, o serviço de geolocalização não é susportado nesse navegador")
+    }
   
+  }
+  
+
+
+
+  useEffect(() => {
+    RenderUserPosition()
     dispatch(requestPetshops());
+
   }, [dispatch]);
   return (
     <div className="d-flex col-12 containerHome">

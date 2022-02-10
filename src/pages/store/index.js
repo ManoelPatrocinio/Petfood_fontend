@@ -21,22 +21,23 @@ import catRoedores from "../../assets/catroedor.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
-import { requestPetshops, requestProducts } from "../../store/modules/shop/actions";
-import {Link} from 'react-router-dom';
-
+import {
+  requestPetshops,
+  requestProducts,
+} from "../../store/modules/shop/actions";
+import { Link } from "react-router-dom";
 
 const Store = () => {
   // retorna a lista das petshops
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(requestPetshops());
-    dispatch(requestProducts())
+    dispatch(requestProducts());
   }, [dispatch]);
   const { petshops } = useSelector((state) => state.shop);
   const { products } = useSelector((state) => state.shop);
-  
-  // ******* fim ***********
 
+  // ******* fim ***********
 
   return (
     <div className="col-12">
@@ -64,9 +65,9 @@ const Store = () => {
           </div>
         </div>
         <div className="categoryPhrase d-flex">
-          <div className="LineSubTitle" style={{width:'20%'}}></div>
+          <div className="LineSubTitle" style={{ width: "20%" }}></div>
           <p> Explore o Melhor</p>
-          <div className="LineSubTitle"  style={{width:'20%'}}></div>
+          <div className="LineSubTitle" style={{ width: "20%" }}></div>
         </div>
       </section>
       {/*start caroulsel slide */}
@@ -145,10 +146,9 @@ const Store = () => {
 
         <div className="Cards_content col-12 d-flex">
           {products
-            .filter((p) => p.avaliacoes > 4)
+            .filter((p) => p.avaliacoes >= 4.8)
             .map((p, index) => (
-               <ProductInCard key={index} product={p} />
-
+              <ProductInCard key={index} product={p} />
             ))}
         </div>
       </section>
@@ -164,9 +164,13 @@ const Store = () => {
 
         <div className="Cards_content col-12 d-flex">
           {petshops
-            .filter((p) => p.avaliacao > 4)
+            .filter((p) => p.avaliacao > 4.5)
             .map((p, index) => (
-              <Link to={`/petshop/${p._id}`} className="PetshopCardLogo" key={index} >
+              <Link
+                to={`/petshop/${p._id}`}
+                className="PetshopCardLogo"
+                key={index}
+              >
                 <img src={p.logo} alt="logo petshop" />
               </Link>
             ))}
@@ -174,7 +178,6 @@ const Store = () => {
       </section>
       {/* End Section Marcas Bem avaliadas */}
 
-      
       {/* main Section Produtos em Destaque */}
       <section className="Section_container col-12">
         <header className="SectionTitleContent d-flex col-12">
@@ -185,14 +188,20 @@ const Store = () => {
 
         <div className="Cards_content col-12 d-flex">
           {products
-            .filter((p) => p.avaliacoes == 5)
+            .filter((p) => p.avaliacoes === 5)
             .map((p, index) => (
-               <ProductInCard key={index} product={p} />
-
+              <ProductInCard key={index} product={p} />
             ))}
         </div>
       </section>
       {/* End Section Marcas Bem avaliadas */}
+
+      {/*  Float Btn for Map page*/}
+      <Link to={'/map'} className="d-block linkMap">
+        <i className="fas fa-street-view"> </i>
+      </Link>
+      {/* End Float Btn for Map page*/}
+
 
       <Footer />
     </div>
