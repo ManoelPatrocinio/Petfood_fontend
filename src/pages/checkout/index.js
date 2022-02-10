@@ -57,7 +57,7 @@ const Checkout = () => {
       },
     });
   };
-  // falta implementar validação, cep nº da cartão etc;
+  // falta implementar validação, ceep, nº da cartão e etc;
   const makePuchase = () => {
     dispatch(setStoreTransaction(transaction));
     setTimeout(() => {

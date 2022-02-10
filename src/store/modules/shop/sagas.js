@@ -18,7 +18,7 @@ export function* requestPetshop(payload) {
   yield put(setPetshop(res.petshop));
 }
 export function* requestProducts() {
-  const response = yield call(api.get, "/store");
+  const response = yield call(api.get, "/");
   const res = response.data;
   yield put(setProdutos(res.products));
 }

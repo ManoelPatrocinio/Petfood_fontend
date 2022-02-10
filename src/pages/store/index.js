@@ -3,20 +3,6 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import ProductInCard from "../../components/products/card";
 
-// ********* IMAGENS *************** //
-// slide img
-import slide1 from "../../assets/slide1.svg";
-import slide2 from "../../assets/slide2.png";
-import slide3 from "../../assets/slide3.png";
-
-// categoria img
-import catDog from "../../assets/catDog.svg";
-import catCat from "../../assets/catCat.svg";
-import catFish from "../../assets/catFish.svg";
-import catBirt from "../../assets/catbird.svg";
-import catRept from "../../assets/catreptiles.svg";
-import catRoedores from "../../assets/catroedor.svg";
-
 // ************* DEPEDENCIAS *************//
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -46,22 +32,22 @@ const Store = () => {
       <section className="containerCategorias col-12">
         <div className="box_categoria_circle d-flex">
           <div className="categoria_item h-100 ">
-            <img src={catDog} alt="" />
+            <img src="https://raw.githubusercontent.com/ManoelPatrocinio/Assets/cffb28767946674ad15450b48029089de90902a7/petfood/catDog.svg" alt="categoria cachorros " />
           </div>
           <div className="categoria_item h-100">
-            <img src={catCat} alt="" />
+            <img src="https://raw.githubusercontent.com/ManoelPatrocinio/Assets/cffb28767946674ad15450b48029089de90902a7/petfood/catCat.svg" alt="categoria gatos" />
           </div>
           <div className="categoria_item h-100">
-            <img src={catBirt} alt="" />
+            <img src="https://raw.githubusercontent.com/ManoelPatrocinio/Assets/cffb28767946674ad15450b48029089de90902a7/petfood/catbird.svg" alt="categoria passaros" />
           </div>
           <div className="categoria_item h-100">
-            <img src={catFish} alt="" />
+            <img src="https://raw.githubusercontent.com/ManoelPatrocinio/Assets/cffb28767946674ad15450b48029089de90902a7/petfood/catFish.svg" alt="categoria peixes" />
           </div>
           <div className="categoria_item h-100">
-            <img src={catRoedores} alt="" />
+            <img src="https://raw.githubusercontent.com/ManoelPatrocinio/Assets/cffb28767946674ad15450b48029089de90902a7/petfood/catroedor.svg" alt="categoria roedores" />
           </div>
           <div className="categoria_item h-100">
-            <img src={catRept} alt="" />
+            <img src="https://raw.githubusercontent.com/ManoelPatrocinio/Assets/cffb28767946674ad15450b48029089de90902a7/petfood/catreptiles.svg" alt="categoria repties" />
           </div>
         </div>
         <div className="categoryPhrase d-flex">
@@ -100,13 +86,13 @@ const Store = () => {
         </div>
         <div className="carousel-inner h-100">
           <div className="carousel-item active">
-            <img src={slide1} className="d-block w-100" alt="..." />
+            <img src="https://raw.githubusercontent.com/ManoelPatrocinio/Assets/cffb28767946674ad15450b48029089de90902a7/petfood/slide1.svg" className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
-            <img src={slide2} className="d-block w-100" alt="..." />
+            <img src="https://github.com/ManoelPatrocinio/Assets/blob/master/petfood/slide2.png?raw=true" className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
-            <img src={slide3} className="d-block w-100" alt="..." />
+            <img src="https://github.com/ManoelPatrocinio/Assets/blob/master/petfood/slide3.png?raw=true" className="d-block w-100" alt="..." />
           </div>
         </div>
         <button

@@ -1,7 +1,6 @@
 import "./styler.css";
 import Logo from "../../assets/logo.png";
 import LogoWhite from "../../assets/logo-white.png";
-import SearchIcon from "../../assets/searchIconQueen.svg";
 import { isAuthenticated, logout } from "../../services/auth";
 import { makeSearch as searchAction } from "../../store/modules/shop/actions";
 import { useSelector, useDispatch } from "react-redux";
@@ -144,8 +143,9 @@ const Header = ({ whiteVersion, hideSideBar }) => {
 
         <form className="formSearch d-flex" onSubmit={handleSubmit(onSubmit)}>
           <button type="submit">
-            <img src={SearchIcon} alt="pesquisar" />
-          </button>
+            
+          <i class="fas fa-search fa-flip-horizontal"></i> 
+                   </button>
           <input
             type="search"
             className="form-control form-control-lg "
@@ -158,7 +158,7 @@ const Header = ({ whiteVersion, hideSideBar }) => {
       </div>
 
       <div className="logoContainer py-3 px-4 text-center">
-        <Link to="/store">
+        <Link to="/">
           <img
             src={whiteVersion ? LogoWhite : Logo}
             className="img-fluid"

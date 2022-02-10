@@ -7,7 +7,7 @@ import{Header,Petshop,Map} from "../../components"
 
 
 
-const Home = () => {
+const MapView = () => {
   const dispatch = useDispatch();
   const { petshops } = useSelector((state) => state.shop);
   const RenderUserPosition = ()=>{
@@ -54,4 +54,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default MapView;

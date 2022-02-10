@@ -68,7 +68,7 @@ button {
   border: none;
 }
 .formSearch button i {
-  color: #6c757d;
+  color: var(--fontColorQueen);
 }
 
 .logoContainer {

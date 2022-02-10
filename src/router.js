@@ -12,7 +12,7 @@ import Sidebar from "./components/sidebar";
 import MenuSidebar from "./components/menu_sidebar";
 import Checkout from "./pages/checkout";
 import Petshop from "./pages/petshop";
-import Home from "./pages/home";
+import MapView from "./pages/MapView";
 import Store from "./pages/store";
 import Search from "./pages/search";
 
@@ -43,10 +43,10 @@ const Routes = () => {
     <>
       <Router>
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact component={Store} />
         </Switch>
         <Switch>
-          <Route path="/store"  exact component={Store} />
+          <Route path="/map"  exact component={MapView} />
         </Switch>
         <Switch>
           <Route path="/petshop/:id" exact component={Petshop} />
