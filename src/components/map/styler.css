@@ -2,3 +2,7 @@
     height: 62%;
     width: 100%;
 }
+.userMarker{
+    font-size: 2rem;
+    color: var(--Queen);
+}

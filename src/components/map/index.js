@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import Marker from "../marker";
 
 
-const Map = ({ petshops }) => {
+const Map = ({ petshops,userLocation }) => {
   const {mapCenter} = useSelector(state => state.shop)
   return (
     <div className="container-map">
@@ -18,6 +18,7 @@ const Map = ({ petshops }) => {
         {petshops.map((p,index) =>(
           <Marker key={index} petshop={p} lat={p.location.lat} lng={p.location.lng}/>
         ))}
+        <i className="fas fa-map-marker-alt userMarker"  lat={userLocation.lat} lng={userLocation.lng} />
       </GoogleMapReact>
     </div>
   );

@@ -144,7 +144,7 @@ const Header = ({ whiteVersion, hideSideBar }) => {
         <form className="formSearch d-flex" onSubmit={handleSubmit(onSubmit)}>
           <button type="submit">
             
-          <i class="fas fa-search fa-flip-horizontal"></i> 
+          <i className="fas fa-search fa-flip-horizontal"></i> 
                    </button>
           <input
             type="search"

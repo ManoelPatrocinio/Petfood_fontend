@@ -4,12 +4,15 @@ import { requestPetshops,setMapCenter } from "../../store/modules/shop/actions";
 
 import "./styler.css";
 import{Header,Petshop,Map} from "../../components"
+import { useState } from "react";
 
 
 
 const MapView = () => {
   const dispatch = useDispatch();
   const { petshops } = useSelector((state) => state.shop);
+  const [userLocation, setUserLocation] = useState([])
+
   const RenderUserPosition = ()=>{
     // resgatando a posição do do usuario
     if ('geolocation' in navigator) {
@@ -18,6 +21,7 @@ const MapView = () => {
           'lat' : position.coords.latitude,
           'lng' :position.coords.longitude
         }
+        setUserLocation(UserLocation)
         dispatch(setMapCenter(UserLocation));
       },(error)=>{
           console.log(error)
@@ -28,9 +32,6 @@ const MapView = () => {
   
   }
   
-
-
-
   useEffect(() => {
     RenderUserPosition()
     dispatch(requestPetshops());
@@ -49,7 +50,7 @@ const MapView = () => {
           ))}
         </ul>
       </div>
-      <Map petshops={petshops} />
+      <Map petshops={petshops} userLocation={userLocation}/>
     </div>
   );
 };
