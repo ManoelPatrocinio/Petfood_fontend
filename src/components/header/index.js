@@ -128,7 +128,7 @@ const Header = ({ whiteVersion, hideSideBar }) => {
   );
 
   return (
-    <div className="col-12 d-flex header-global">
+    <div className="col-12 d-flex header-global" id="Header">
       <div className="containerMenuMobile">
         <button
           type="button"

@@ -10,13 +10,11 @@ const Petshop = ({ match }) => {
   const dispatch = useDispatch();
   const [filtedList, setFiltedList] = useState();
   const { petshop } = useSelector((state) => state.shop);
-  var arrayFilted = petshop
 
   useEffect(() => {
     dispatch(requestPetshop(match.params.id));
   }, []);
 
-  
   const FilterByMark = (markSelected) => {
     const newList = petshop.products?.filter((produto) =>
       produto.marca.toLowerCase().includes(markSelected.toLowerCase())
@@ -26,12 +24,16 @@ const Petshop = ({ match }) => {
 
   const FilterByLowestPrice = (value) => {
     if (value === "menorPreco") {
-      arrayFilted.products?.sort((a,b) =>a.preco - b.preco );
-    console.log("arrayFilted", arrayFilted);
-
+      //  arrayFilted.products?.sort((a,b) =>a.nome - b.nome );
     } else {
       console.log(" não foi", value);
     }
+  };
+  const FilterByPetType = (typeSelected) => {
+    const newList = petshop.products?.filter((produto) =>
+      produto.nome.toLowerCase().includes(typeSelected.toLowerCase())
+    );
+    setFiltedList(newList);
   };
 
   return (
@@ -68,14 +70,13 @@ const Petshop = ({ match }) => {
             <div className="Filter_Container d-flex">
               <h3 className="Content_title">Filtrar Por:</h3>
 
-              <div className="filter_Content d-flex" id="marca_filter_content">
                 <h4 className="Content_title">Marca:</h4>
+              <div className="filter_Content d-flex" id="marca_filter_content">
                 <div className="form-check">
                   <input
                     className="form-check-input"
                     type="radio"
                     name="flexRadioDefault"
-                    id="PEDIGREE"
                     onClick={() => FilterByMark("")}
                   />
                   <label className="form-check-label" htmlFor="PEDIGREE">
@@ -186,8 +187,8 @@ const Petshop = ({ match }) => {
                 </div>
               </div>
 
-              <div className="filter_Content d-flex">
                 <h4 className="Content_title">Pet:</h4>
+              <div className="filter_Content d-flex">
 
                 <div className="form-check">
                   <input
@@ -196,6 +197,7 @@ const Petshop = ({ match }) => {
                     name="flexRadioDefault"
                     value=""
                     id="PetLove"
+                    onClick={()=>{FilterByPetType('')}}
                   />
                   <label className="form-check-label" htmlFor="PetLove">
                     Cães
@@ -208,6 +210,8 @@ const Petshop = ({ match }) => {
                     name="flexRadioDefault"
                     value=""
                     id="flexCheckChecked"
+                    onClick={()=>{FilterByPetType("Gatos")}}
+
                   />
                   <label
                     className="form-check-label"
@@ -247,6 +251,14 @@ const Petshop = ({ match }) => {
                 : petshop.products?.map((p, index) => (
                     <ProductInCard product={p} key={index} />
                   ))}
+              <button
+                className="btnForTop"
+                onClick={() => {
+                  window.scrollTo(0, 0 );
+                }}
+              >
+                <i className="fas fa-arrow-up"></i>{" "}
+              </button>
             </div>
           </div>
         </div>

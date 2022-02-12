@@ -114,7 +114,7 @@
   border-radius: 5px;
 }
 .linkMap {
-  position: absolute;
+  position: fixed;
   max-width: 6.875rem;
   height: auto;
   left: 1.5rem;

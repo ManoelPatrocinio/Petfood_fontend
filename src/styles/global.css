@@ -10,6 +10,9 @@ a {
   text-decoration: none;
   list-style: none;
 }
+html{
+  overflow-x: hidden;
+}
 
 :root {
   --fontColorQueen: #06d6a0;
@@ -30,11 +33,10 @@ a {
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
   font-family: "Open Sans";
   letter-spacing: 0;
   font-size: 1rem;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   background-color: var(--background_light);
 }
 *::-webkit-scrollbar {
@@ -98,6 +100,21 @@ input[type="date"]:disabled {
   background-color: var(--Orange) !important;
   border-color: var(--Orange);
 }
+.btnForTop{
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+
+}
+
+.btnForTop i{
+  font-size: 2rem;
+  color: var(--fontColorQueen);
+}
+
 
 .badge {
   font-weight: 500;

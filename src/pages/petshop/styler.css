@@ -105,7 +105,7 @@
 *
 */
 
-@media (max-width: 575.98px) {
+@media (max-width: 600px) {
   .containerPetInfo {
     flex-direction: column;
     width: 100vw;
@@ -156,20 +156,28 @@
     width: 100% !important;
     max-width: 100% !important;
   }
+  .btnForTop{
+    right: 1rem;
+  }
 }
 
-@media (min-width: 575.98px) AND (max-width: 900px) {
+@media (min-width: 575.98px) AND (max-width: 992px) {
   .container,
-  .container-sm {
-    max-width: 600px;
+  .container-sm,
+  .containerPetInfo {
+    min-width: 100%;
   }
-  .product {
-    min-width: 40%;
-  }
-  .petshopDestaque {
-    width: 22% !important;
+  .pet_info_filters{
+    min-width: 22%!important;
   }
   .containerProdutos {
-    width: 75%;
+    width: 78% !important;
   }
+  .product {
+    width: 14rem !important;
+  }
+  .btnForTop{
+    right: 1rem;
+  }
+
 }
