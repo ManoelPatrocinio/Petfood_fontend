@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+## LICENSE!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/ManoelPatrocinio/Petfoof_fontend/edit/mainLICENSE)
 
-## Available Scripts
+## 💻 Sobre o projeto
 
-In the project directory, you can run:
+Este projeto é um marketplace para petshops, onde o cliente poderá encontrar as petshops mais próximas, visualizando-as através do mapa, e, finalizando a compra no próprio site, visto que há integração com a api do Pagar.me.
 
-### `yarn start`
+[Confira o projeto](https://thepetfood.vercel.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## TECNOLOGIAS USADAS
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- ReactJS
+- Styled Components
+- Redux
+- Redux Saga
+- React Hook Form
+- Sweetalert
 
-### `yarn test`
+## Proxímas Imprementações
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Aplicação de técnicas UX/UI
+- Otimização e SEO
 
-### `yarn build`
+## 🎨 Layout
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+</br>
+O layout da aplicação está disponível no Figma:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<a href="https://www.figma.com/file/Js7in6EaEfs0BjF9xBnrr4/MyPetfood?node-id=0%3A1&t=KtOtzrRS9SXqNzd0-1">
+  <img alt="Made by tgmarinho" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
+</a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Web
 
-### `yarn eject`
+<p align="center" style="display: flex; align-items: flex-start; justify-content: space-between;">
+<img alt="petfood layout web"  src="./src/assets/petfood_layout_descktop.png" width="49%" >
+<img alt="petfood layout web"  src="./src/assets/petfood_layout_descktop2.png" width="49%" >
+</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Mobile
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<div align="center"  style="width:100%; display: flex; align-items: flex-start; justify-content: space-between;">
+ <img alt="petfood layout mobile"  src="./src/assets/petfood_layout_mobile.png" width="30%"  >
+ <img alt="petfood layout mobile"  src="./src/assets/petfood_layout_mobile3.jpeg" width="30%" >
+ <img alt="petfood layout mobile"  src="./src/assets/petfood_layout_mobile4.jpeg" width="30%" >
+</div>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Pré-requisitos
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), e ReactJS
+Além disto, é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-## Learn More
+### 🎲 Rodando o Projeto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+# Clone este repositório
+$ git clone <https://github.com/ManoelPatrocinio/Petfoof_fontend>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Acesse a pasta do projeto no terminal/cmd
+$ cd Petfoof_fontend
 
-### Code Splitting
+# Instale as dependências iniciais
+$ npm install
+$ npm install --global yarn
+$ yarn init -Y
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Execute a aplicação
+$ yarn start
 
-### Analyzing the Bundle Size
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Autor
 
-### Advanced Configuration
+Feito por Manoel Patrocinio 👋🏽 Entre em contato!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![instagram Badge](https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white=https://www.instagram.com/patrocinioiii/)](https://www.instagram.com/patrocinioiii/) [![Linkedin Badge](https://img.shields.io/badge/-Manoel-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://linkedin.com/in/manoel-patrocinio-1b342b203/)](https://linkedin.com/in/manoel-patrocinio-1b342b203)
+[![Gmail Badge](https://img.shields.io/badge/-manoelpatrocinio99@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:manoelpatrocinio99@gmail.com)](mailto:manoelpatrocinio99@gmail.com)
