@@ -35,8 +35,7 @@
 }
 
 #slideDestaques {
-  height: 16.875rem;
-  max-height: 16.875rem;
+  height: 21rem;
 }
 
 .carousel-item {
@@ -125,19 +124,15 @@
   background-color: transparent;
   font-weight: 600;
   font-size: 1rem;
-  filter:drop-shadow(2px 1px 10px #000);
+  filter: drop-shadow(2px 1px 10px #000);
   cursor: pointer;
-
 }
-.linkMap i{
+.linkMap i {
   font-size: 3rem;
-
 }
-.linkMap i:hover{
+.linkMap i:hover {
   color: var(--Orange);
-
 }
-
 
 /* ****************************** */
 
@@ -146,14 +141,13 @@
 * layout mobile
 */
 @media (max-width: 600px) {
-  .box_categoria_circle{
+  .box_categoria_circle {
     overflow-x: auto;
     padding: 2% 0;
   }
-  .box_categoria_circle::-webkit-scrollbar{
-    display: none!important;
-
-  } 
+  .box_categoria_circle::-webkit-scrollbar {
+    display: none !important;
+  }
   .categoria_item {
     border-radius: 50%;
     min-width: 4.25rem;

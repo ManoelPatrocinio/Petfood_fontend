@@ -10,7 +10,7 @@ a {
   text-decoration: none;
   list-style: none;
 }
-html{
+html {
   overflow-x: hidden;
 }
 
@@ -22,14 +22,14 @@ html{
 
   --Queen: #06d6a0;
   --Orange: #fa643d;
-  --Gray: #C4C4C4;
-
+  --Gray: #c4c4c4;
 
   --background_dark: #212127;
   --background_dark_secondary: #26262d;
   --background_light: #ffffff;
   --FontColorWrite: #fff;
 }
+
 html,
 body {
   height: 100%;
@@ -42,22 +42,21 @@ body {
 *::-webkit-scrollbar {
   width: 5px;
   max-height: 8px;
+  
 }
 
 *::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.3) ;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
 *::-webkit-scrollbar-thumb {
   border-radius: 2px;
-  -webkit-box-shadow: inset 0 0 6px  var(--Queen); 
-  box-shadow:inset 0 0 6px  var(--Queen) ;
+  -webkit-box-shadow: inset 0 0 6px var(--Queen);
+  box-shadow: inset 0 0 6px var(--Queen);
   background: #06d6a0;
-
 }
-
 
 .btn-secondary {
   background-color: var(--Orange) !important;
@@ -100,21 +99,19 @@ input[type="date"]:disabled {
   background-color: var(--Orange) !important;
   border-color: var(--Orange);
 }
-.btnForTop{
+.btnForTop {
   position: fixed;
   right: 2rem;
   bottom: 2rem;
   width: 2rem;
   height: 2rem;
   padding: 0;
-
 }
 
-.btnForTop i{
+.btnForTop i {
   font-size: 2rem;
   color: var(--fontColorQueen);
 }
-
 
 .badge {
   font-weight: 500;

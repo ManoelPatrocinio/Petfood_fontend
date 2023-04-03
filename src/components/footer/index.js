@@ -1,22 +1,18 @@
-import "./styler.css";
 import { Link } from "react-router-dom";
+import "./styler.css";
 
 const Footer = () => {
   return (
     <footer className="global_footer d-flex col-12">
       <div className="d-flex col-12  justify-content-evenly containerInfor">
         <div className="Card-footer infor_apps d-flex">
-          <button
+          <h4
             className="footerTitle"
-            data-bs-toggle="collapse"
-            href="#collapseInfoAndHelp"
-            
-            aria-expanded="false"
-            aria-controls="collapseInfoAndHelp"
+          
           >
             Informações e Ajuda
-          </button>
-          <ul className="footerList collapse" id="collapseInfoAndHelp">
+          </h4>
+          <ul className="footerList" id="collapseInfoAndHelp">
             <li>
               <Link to=""> Sobre Nós</Link>
             </li>
@@ -33,48 +29,28 @@ const Footer = () => {
               <Link to=""> Trocas e Devoluções</Link>
             </li>
           </ul>
-          <div>
-            <button
-              className="footerTitle"
-              data-bs-toggle="collapse"
-              href="#collapseApp"
-              
-              aria-expanded="false"
-              aria-controls="collapseApp"
-            >
-              Nosso App
-            </button>
-            <ul className="footerList collapse" id="collapseApp"></ul>
-          </div>
+         
         </div>
-        <div className="Card-footer sagurança_pagamento d-flex">
-          <button
+        <div className="Card-footer sagurança_pagamento d-flex ">
+          <h4
             className="footerTitle"
-            data-bs-toggle="collapse"
-            href="#imgCartoes"
-            
-            aria-expanded="false"
-            aria-controls="imgCartoes"
+           
           >
             Formas de pagamento
-          </button>
+          </h4>
           <img
             id="imgCartoes"
-            className="collapse"
+            className="mb-3"
             src="https://www.melhoresdestinos.com.br/wp-content/uploads/2020/02/bandeiras-3.png"
             alt="formas de pagamento"
           />
-          <div className="card-segurança">
-            <button
+          <div className="card-segurança ">
+            <h4
               className="footerTitle col-12"
-              data-bs-toggle="collapse"
-              href="#collapseSecury"
-              
-              aria-expanded="false"
-              aria-controls="collapseSecury"
+            
             >
               Segurança
-            </button>
+            </h4>
             <div id="collapseSecury" className="collapse wrapperImg col-12 ">
               <img
                 src="https://chico-rei.imgix.net/images/site/seguranca/seal_google_safe_browsing.gif"
@@ -88,17 +64,13 @@ const Footer = () => {
           </div>
         </div>
         <div className="Card-footer social_myConta d-flex ">
-          <button
+          <h4
             className="footerTitle mt-2"
-            data-bs-toggle="collapse"
-            href="#collapseMyConta"
-            
-            aria-expanded="false"
-            aria-controls="collapseMyConta"
+           
           >
             Minha Conta
-          </button>
-          <ul className="footerList collapse" id="collapseMyConta">
+          </h4>
+          <ul className="footerList " id="collapseMyConta">
             <li>
               <Link to=""> Meus pedidos</Link>
             </li>
@@ -110,19 +82,15 @@ const Footer = () => {
             </li>
           </ul>
 
-          <button
+          <h4
             className="footerTitle"
-            data-bs-toggle="collapse"
-            href="#collapseSocialNetwork"
-            
-            aria-expanded="false"
-            aria-controls="collapseSocialNetwork"
+        
           >
             Nossas Redes
-          </button>
+          </h4>
 
           <div
-            className="wrapperSocialMedia col-12  collapse"
+            className="wrapperSocialMedia col-12  "
             id="collapseSocialNetwork"
           >
             <Link to="" className="SocialMediaIcon">
@@ -160,7 +128,7 @@ const Footer = () => {
           >
             Crédito pelas imagens
           </button>
-          <ul className="dropdown-menu" id="ulCreditoImg">
+          <ul className="dropdown-menu p-3" id="ulCreditoImg">
             <li>
               {" "}
               <a href="https://www.freepik.com" title="Freepik" target="blank">

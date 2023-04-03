@@ -1,9 +1,8 @@
+import { useSelector } from "react-redux";
 import "./styler.css";
-import {  useSelector } from "react-redux";
 
-import ProductInCard from "../../components/products/card";
-import Header from "../../components/header";
-import Footer from "../../components/footer"
+import { Footer, Header, Loading, ProductInCard } from "../../components";
+
 
 const Search = () => {
 
@@ -22,13 +21,14 @@ const Search = () => {
   )
 
   return (
-    <div className="h-100">
+    <div className="h-auto">
       <Header />
       <div className="container">
-        <div className="row containerPetInfo">
+        <div className="row w-100">
           <h5>Resultados da sua busca</h5>
           <br />
           {products && renderProducts}
+          {products.length <= 0 && (<Loading/>)}
         </div>
       </div>
       <Footer />

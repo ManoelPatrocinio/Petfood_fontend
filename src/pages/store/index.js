@@ -1,17 +1,17 @@
+import { Footer, Header, Loading, ProductInCard } from "../../components";
+
 import "./style.css";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
-import ProductInCard from "../../components/products/card";
 
 // ************* DEPEDENCIAS *************//
-import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { Link } from "react-router-dom";
 
 import {
   requestPetshops,
   requestProducts,
 } from "../../store/modules/shop/actions";
-import { Link } from "react-router-dom";
 
 const Store = () => {
   // retorna a lista das petshops
@@ -22,7 +22,6 @@ const Store = () => {
   }, [dispatch]);
   const { petshops } = useSelector((state) => state.shop);
   const { products } = useSelector((state) => state.shop);
-
   // ******* fim ***********
 
   return (
@@ -85,13 +84,13 @@ const Store = () => {
           ></button>
         </div>
         <div className="carousel-inner h-100">
-          <div className="carousel-item active">
+          <div className="carousel-item h-100 active">
             <img src="https://raw.githubusercontent.com/ManoelPatrocinio/Assets/cffb28767946674ad15450b48029089de90902a7/petfood/slide1.svg" className="d-block w-100" alt="..." />
           </div>
-          <div className="carousel-item">
+          <div className="carousel-item h-100">
             <img src="https://github.com/ManoelPatrocinio/Assets/blob/master/petfood/slide2.png?raw=true" className="d-block w-100" alt="..." />
           </div>
-          <div className="carousel-item">
+          <div className="carousel-item h-100">
             <img src="https://github.com/ManoelPatrocinio/Assets/blob/master/petfood/slide3.png?raw=true" className="d-block w-100" alt="..." />
           </div>
         </div>
@@ -130,7 +129,8 @@ const Store = () => {
           <div className="LineSubTitle"></div>
         </header>
 
-        <div className="Cards_content col-12 d-flex">
+        <div className="Cards_content col-12 d-flex justiy-content-center">
+          {products.length <= 0 && (<Loading/>)}
           {products
             .filter((p) => p.avaliacoes >= 4.8)
             .map((p, index) => (
@@ -149,6 +149,7 @@ const Store = () => {
         </header>
 
         <div className="Cards_content col-12 d-flex">
+          {petshops.length <= 0  && (<Loading/>)}
           {petshops
             .filter((p) => p.avaliacao > 4.5)
             .map((p, index) => (
@@ -173,6 +174,8 @@ const Store = () => {
         </header>
 
         <div className="Cards_content col-12 d-flex">
+          {products.length <= 0 && (<Loading/>)}
+          
           {products
             .filter((p) => p.avaliacoes === 5)
             .map((p, index) => (

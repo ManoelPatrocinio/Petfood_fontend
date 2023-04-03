@@ -1,10 +1,10 @@
-import "./styler.css";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { requestPetshop } from "../../store/modules/shop/actions";
+import "./styler.css";
 
-import ProductInCard from "../../components/products/card";
 import Header from "../../components/header";
+import ProductInCard from "../../components/products/card";
 
 const Petshop = ({ match }) => {
   const dispatch = useDispatch();
@@ -37,10 +37,10 @@ const Petshop = ({ match }) => {
   };
 
   return (
-    <div className="h-100">
+    <div className="h-auto">
       <Header />
       <div className="container">
-        <div className="row containerPetInfo">
+        <div className="row w-100 containerPetInfo">
           <div className="col-2 pet_info_filters">
             <div className="Petshop_Information">
               <div className="col-12 containerImg">
@@ -89,7 +89,7 @@ const Petshop = ({ match }) => {
                     type="radio"
                     name="flexRadioDefault"
                     id="PEDIGREE"
-                    onClick={() => FilterByMark("PEDIGREE®")}
+                    onClick={() => FilterByMark("PEDIGREE")}
                   />
                   <label className="form-check-label" htmlFor="PEDIGREE">
                     Pedrigree
@@ -140,7 +140,7 @@ const Petshop = ({ match }) => {
                     name="flexRadioDefault"
                     value="Golden "
                     id="Golden "
-                    onClick={() => FilterByMark("PremieR")}
+                    onClick={() => FilterByMark("Golden")}
                   />
                   <label className="form-check-label" htmlFor="Golden ">
                     Golden
@@ -197,7 +197,7 @@ const Petshop = ({ match }) => {
                     name="flexRadioDefault"
                     value=""
                     id="PetLove"
-                    onClick={()=>{FilterByPetType('')}}
+                    onClick={()=>{FilterByPetType('Cães')}}
                   />
                   <label className="form-check-label" htmlFor="PetLove">
                     Cães

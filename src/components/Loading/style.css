@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.loading {
+  width: 9rem;
+  height: 9rem;
+  border: 5px solid #05a67c;
+  border-top-color: var(--Queen);
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}
+.message p {
+  font-size: 2rem;
+  color: var(--fontColorQueen);
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
